@@ -2,15 +2,25 @@
     <div class="container">
         <div class="row">
             <div class="panel panel-default">
-                <div class="panel-heading">Example Component</div>
-
-                <div id="calendar"></div>
+                <div class="panel-heading">Bank holidays</div>
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+    .container {
+        width: 600px;
+        .legends {
+            span {
+                width: 15px;
+                height: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                border-radius: 15px;
+            }
+        }
+    }
     .calendar .month-container {
         height: 230px;
     }
