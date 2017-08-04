@@ -79,7 +79,7 @@
     import moment from 'moment';
     import momentHoliday from '../../vendor/moment-holiday/moment-holiday';
     import momentLunar from '../../vendor/moment-lunar/moment-lunar';
-    import Calendar from 'bootstrap-year-calendar';
+    import Calendar from '../../vendor/bootstrap-year-calendar/js/bootstrap-year-calendar';
 
     export default {
         mounted() {

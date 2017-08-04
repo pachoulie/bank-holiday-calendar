@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 133);
+/******/ 	return __webpack_require__(__webpack_require__.s = 131);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1896,7 +1896,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(168)("./" + name);
+            __webpack_require__(166)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -4540,8 +4540,8 @@ return hooks;
 "use strict";
 
 
-var bind = __webpack_require__(8);
-var isBuffer = __webpack_require__(141);
+var bind = __webpack_require__(6);
+var isBuffer = __webpack_require__(139);
 
 /*global toString:true*/
 
@@ -4872,16 +4872,14 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(1);
-var normalizeHeaderName = __webpack_require__(144);
+var normalizeHeaderName = __webpack_require__(142);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -4897,10 +4895,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(9);
+    adapter = __webpack_require__(7);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(9);
+    adapter = __webpack_require__(7);
   }
   return adapter;
 }
@@ -4971,10 +4969,10 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(143)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(141)))
 
 /***/ }),
-/* 6 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var g;
@@ -5001,7 +4999,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /* =========================================================
@@ -6116,7 +6114,7 @@ module.exports = g;
  }(window.jQuery));
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6134,19 +6132,19 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 9 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(1);
-var settle = __webpack_require__(145);
-var buildURL = __webpack_require__(147);
-var parseHeaders = __webpack_require__(148);
-var isURLSameOrigin = __webpack_require__(149);
-var createError = __webpack_require__(10);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(150);
+var settle = __webpack_require__(143);
+var buildURL = __webpack_require__(145);
+var parseHeaders = __webpack_require__(146);
+var isURLSameOrigin = __webpack_require__(147);
+var createError = __webpack_require__(8);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(148);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -6243,7 +6241,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(151);
+      var cookies = __webpack_require__(149);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -6321,13 +6319,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 10 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(146);
+var enhanceError = __webpack_require__(144);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -6346,7 +6344,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 11 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6358,7 +6356,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6384,7 +6382,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 13 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6462,7 +6460,7 @@ return af;
 
 
 /***/ }),
-/* 14 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6609,7 +6607,7 @@ return ar;
 
 
 /***/ }),
-/* 15 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6673,7 +6671,7 @@ return arDz;
 
 
 /***/ }),
-/* 16 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6737,7 +6735,7 @@ return arKw;
 
 
 /***/ }),
-/* 17 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6868,7 +6866,7 @@ return arLy;
 
 
 /***/ }),
-/* 18 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6933,7 +6931,7 @@ return arMa;
 
 
 /***/ }),
-/* 19 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7043,7 +7041,7 @@ return arSa;
 
 
 /***/ }),
-/* 20 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7107,7 +7105,7 @@ return arTn;
 
 
 /***/ }),
-/* 21 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7217,7 +7215,7 @@ return az;
 
 
 /***/ }),
-/* 22 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7356,7 +7354,7 @@ return be;
 
 
 /***/ }),
-/* 23 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7451,7 +7449,7 @@ return bg;
 
 
 /***/ }),
-/* 24 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7575,7 +7573,7 @@ return bn;
 
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7699,7 +7697,7 @@ return bo;
 
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7812,7 +7810,7 @@ return br;
 
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7960,7 +7958,7 @@ return bs;
 
 
 /***/ }),
-/* 28 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8053,7 +8051,7 @@ return ca;
 
 
 /***/ }),
-/* 29 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8230,7 +8228,7 @@ return cs;
 
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8298,7 +8296,7 @@ return cv;
 
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8384,7 +8382,7 @@ return cy;
 
 
 /***/ }),
-/* 32 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8449,7 +8447,7 @@ return da;
 
 
 /***/ }),
-/* 33 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8532,7 +8530,7 @@ return de;
 
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8616,7 +8614,7 @@ return deAt;
 
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8699,7 +8697,7 @@ return deCh;
 
 
 /***/ }),
-/* 36 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8804,7 +8802,7 @@ return dv;
 
 
 /***/ }),
-/* 37 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8909,7 +8907,7 @@ return el;
 
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8981,7 +8979,7 @@ return enAu;
 
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9049,7 +9047,7 @@ return enCa;
 
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9121,7 +9119,7 @@ return enGb;
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9193,7 +9191,7 @@ return enIe;
 
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9265,7 +9263,7 @@ return enNz;
 
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9343,7 +9341,7 @@ return eo;
 
 
 /***/ }),
-/* 44 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9431,7 +9429,7 @@ return es;
 
 
 /***/ }),
-/* 45 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9518,7 +9516,7 @@ return esDo;
 
 
 /***/ }),
-/* 46 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9603,7 +9601,7 @@ return et;
 
 
 /***/ }),
-/* 47 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9674,7 +9672,7 @@ return eu;
 
 
 /***/ }),
-/* 48 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9786,7 +9784,7 @@ return fa;
 
 
 /***/ }),
-/* 49 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9898,7 +9896,7 @@ return fi;
 
 
 /***/ }),
-/* 50 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9963,7 +9961,7 @@ return fo;
 
 
 /***/ }),
-/* 51 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10051,7 +10049,7 @@ return fr;
 
 
 /***/ }),
-/* 52 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10130,7 +10128,7 @@ return frCa;
 
 
 /***/ }),
-/* 53 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10213,7 +10211,7 @@ return frCh;
 
 
 /***/ }),
-/* 54 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10293,7 +10291,7 @@ return fy;
 
 
 /***/ }),
-/* 55 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10374,7 +10372,7 @@ return gd;
 
 
 /***/ }),
-/* 56 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10456,7 +10454,7 @@ return gl;
 
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10583,7 +10581,7 @@ return gomLatn;
 
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10687,7 +10685,7 @@ return he;
 
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10816,7 +10814,7 @@ return hi;
 
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10966,7 +10964,7 @@ return hr;
 
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11080,7 +11078,7 @@ return hu;
 
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11180,7 +11178,7 @@ return hyAm;
 
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11268,7 +11266,7 @@ return id;
 
 
 /***/ }),
-/* 64 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11400,7 +11398,7 @@ return is;
 
 
 /***/ }),
-/* 65 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11475,7 +11473,7 @@ return it;
 
 
 /***/ }),
-/* 66 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11560,7 +11558,7 @@ return ja;
 
 
 /***/ }),
-/* 67 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11648,7 +11646,7 @@ return jv;
 
 
 /***/ }),
-/* 68 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11742,7 +11740,7 @@ return ka;
 
 
 /***/ }),
-/* 69 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11834,7 +11832,7 @@ return kk;
 
 
 /***/ }),
-/* 70 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11897,7 +11895,7 @@ return km;
 
 
 /***/ }),
-/* 71 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12028,7 +12026,7 @@ return kn;
 
 
 /***/ }),
-/* 72 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12102,7 +12100,7 @@ return ko;
 
 
 /***/ }),
-/* 73 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12195,7 +12193,7 @@ return ky;
 
 
 /***/ }),
-/* 74 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12337,7 +12335,7 @@ return lb;
 
 
 /***/ }),
-/* 75 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12412,7 +12410,7 @@ return lo;
 
 
 /***/ }),
-/* 76 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12534,7 +12532,7 @@ return lt;
 
 
 /***/ }),
-/* 77 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12636,7 +12634,7 @@ return lv;
 
 
 /***/ }),
-/* 78 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12752,7 +12750,7 @@ return me;
 
 
 /***/ }),
-/* 79 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12821,7 +12819,7 @@ return mi;
 
 
 /***/ }),
-/* 80 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12916,7 +12914,7 @@ return mk;
 
 
 /***/ }),
-/* 81 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13002,7 +13000,7 @@ return ml;
 
 
 /***/ }),
-/* 82 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13166,7 +13164,7 @@ return mr;
 
 
 /***/ }),
-/* 83 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13253,7 +13251,7 @@ return ms;
 
 
 /***/ }),
-/* 84 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13341,7 +13339,7 @@ return msMy;
 
 
 /***/ }),
-/* 85 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13442,7 +13440,7 @@ return my;
 
 
 /***/ }),
-/* 86 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13510,7 +13508,7 @@ return nb;
 
 
 /***/ }),
-/* 87 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13638,7 +13636,7 @@ return ne;
 
 
 /***/ }),
-/* 88 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13731,7 +13729,7 @@ return nl;
 
 
 /***/ }),
-/* 89 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13824,7 +13822,7 @@ return nlBe;
 
 
 /***/ }),
-/* 90 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13889,7 +13887,7 @@ return nn;
 
 
 /***/ }),
-/* 91 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14018,7 +14016,7 @@ return paIn;
 
 
 /***/ }),
-/* 92 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14130,7 +14128,7 @@ return pl;
 
 
 /***/ }),
-/* 93 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14200,7 +14198,7 @@ return pt;
 
 
 /***/ }),
-/* 94 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14266,7 +14264,7 @@ return ptBr;
 
 
 /***/ }),
-/* 95 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14346,7 +14344,7 @@ return ro;
 
 
 /***/ }),
-/* 96 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14534,7 +14532,7 @@ return ru;
 
 
 /***/ }),
-/* 97 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14637,7 +14635,7 @@ return sd;
 
 
 /***/ }),
-/* 98 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14703,7 +14701,7 @@ return se;
 
 
 /***/ }),
-/* 99 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14779,7 +14777,7 @@ return si;
 
 
 /***/ }),
-/* 100 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14934,7 +14932,7 @@ return sk;
 
 
 /***/ }),
-/* 101 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15101,7 +15099,7 @@ return sl;
 
 
 /***/ }),
-/* 102 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15176,7 +15174,7 @@ return sq;
 
 
 /***/ }),
-/* 103 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15291,7 +15289,7 @@ return sr;
 
 
 /***/ }),
-/* 104 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15406,7 +15404,7 @@ return srCyrl;
 
 
 /***/ }),
-/* 105 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15500,7 +15498,7 @@ return ss;
 
 
 /***/ }),
-/* 106 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15574,7 +15572,7 @@ return sv;
 
 
 /***/ }),
-/* 107 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15638,7 +15636,7 @@ return sw;
 
 
 /***/ }),
-/* 108 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15773,7 +15771,7 @@ return ta;
 
 
 /***/ }),
-/* 109 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15867,7 +15865,7 @@ return te;
 
 
 /***/ }),
-/* 110 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15940,7 +15938,7 @@ return tet;
 
 
 /***/ }),
-/* 111 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16012,7 +16010,7 @@ return th;
 
 
 /***/ }),
-/* 112 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16079,7 +16077,7 @@ return tlPh;
 
 
 /***/ }),
-/* 113 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16204,7 +16202,7 @@ return tlh;
 
 
 /***/ }),
-/* 114 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16299,7 +16297,7 @@ return tr;
 
 
 /***/ }),
-/* 115 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16395,7 +16393,7 @@ return tzl;
 
 
 /***/ }),
-/* 116 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16458,7 +16456,7 @@ return tzm;
 
 
 /***/ }),
-/* 117 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16521,7 +16519,7 @@ return tzmLatn;
 
 
 /***/ }),
-/* 118 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16677,7 +16675,7 @@ return uk;
 
 
 /***/ }),
-/* 119 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16781,7 +16779,7 @@ return ur;
 
 
 /***/ }),
-/* 120 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16844,7 +16842,7 @@ return uz;
 
 
 /***/ }),
-/* 121 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16907,7 +16905,7 @@ return uzLatn;
 
 
 /***/ }),
-/* 122 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16991,7 +16989,7 @@ return vi;
 
 
 /***/ }),
-/* 123 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17064,7 +17062,7 @@ return xPseudo;
 
 
 /***/ }),
-/* 124 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17129,7 +17127,7 @@ return yo;
 
 
 /***/ }),
-/* 125 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17245,7 +17243,7 @@ return zhCn;
 
 
 /***/ }),
-/* 126 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17355,7 +17353,7 @@ return zhHk;
 
 
 /***/ }),
-/* 127 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17464,7 +17462,7 @@ return zhTw;
 
 
 /***/ }),
-/* 128 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js locale configuration
@@ -17485,19 +17483,19 @@ return zhTw;
       SK : Saskatchewan
 */
 
-(function() {
-    var moment = ( true) ? __webpack_require__(0) : this.moment;
+(function () {
+  var moment =  true ? __webpack_require__(0) : this.moment;
 
-    moment.holidays.canada = {
+  moment.holidays.canada = {
     "New Year's Day": {
       date: '1/1',
       keywords: ['new'],
       keywords_y: ['year'],
-      keywords_n: ['eve'],
+      keywords_n: ['eve']
     },
     "Valentine's Day": {
       date: '2/14',
-      keywords_y: ['valentine'],
+      keywords_y: ['valentine']
     },
     "Islander Day": {
       date: '2/(1,2)',
@@ -17591,21 +17589,22 @@ return zhTw;
     }
   };
 
-  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
+  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+    module.exports = moment;
+  }
 }).call(this);
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 129 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js locale configuration
 //! locale : Croatia / Hrvatska
 //! author : diomed : https://github.com/diomed
 
-(function() {
-  var moment = ( true) ? __webpack_require__(0) : this.moment;
+(function () {
+  var moment =  true ? __webpack_require__(0) : this.moment;
 
   moment.holidays.croatia = {
     "Nova Godina": {
@@ -17667,21 +17666,22 @@ return zhTw;
     }
   };
 
-  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
+  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+    module.exports = moment;
+  }
 }).call(this);
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 130 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js locale configuration
 //! locale : Easter Related Holidays
 //! author : Kodie Grantham : https://github.com/kodie
 
-(function() {
-  var moment = ( true) ? __webpack_require__(0) : this.moment;
+(function () {
+  var moment =  true ? __webpack_require__(0) : this.moment;
 
   moment.holidays.easter = {
     "Ash Wednesday": {
@@ -17730,44 +17730,53 @@ return zhTw;
     }
   };
 
-  var easter = function(Y) {
-    var C = Math.floor(Y/100);
-    var N = Y - 19*Math.floor(Y/19);
-    var K = Math.floor((C - 17)/25);
-    var I = C - Math.floor(C/4) - Math.floor((C - K)/3) + 19*N + 15;
-    I = I - 30*Math.floor((I/30));
-    I = I - Math.floor(I/28)*(1 - Math.floor(I/28)*Math.floor(29/(I + 1))*Math.floor((21 - N)/11));
-    var J = Y + Math.floor(Y/4) + I + 2 - C + Math.floor(C/4);
-    J = J - 7*Math.floor(J/7);
+  var easter = function easter(Y) {
+    var C = Math.floor(Y / 100);
+    var N = Y - 19 * Math.floor(Y / 19);
+    var K = Math.floor((C - 17) / 25);
+    var I = C - Math.floor(C / 4) - Math.floor((C - K) / 3) + 19 * N + 15;
+    I = I - 30 * Math.floor(I / 30);
+    I = I - Math.floor(I / 28) * (1 - Math.floor(I / 28) * Math.floor(29 / (I + 1)) * Math.floor((21 - N) / 11));
+    var J = Y + Math.floor(Y / 4) + I + 2 - C + Math.floor(C / 4);
+    J = J - 7 * Math.floor(J / 7);
     var L = I - J;
-    var M = 3 + Math.floor((L + 40)/44);
-    var D = L + 28 - 31*Math.floor(M/4);
-    return moment([Y, (M-1), D]);
+    var M = 3 + Math.floor((L + 40) / 44);
+    var D = L + 28 - 31 * Math.floor(M / 4);
+    return moment([Y, M - 1, D]);
   };
 
-  moment.modifyHolidays.extendParser(function(m, date){
-    if (date === 'ashwednesday' ||
-        date === 'lent' ||
-        date === 'goodfriday' ||
-        date === 'holysaturday' ||
-        date === 'easter' ||
-        date === 'eastermonday' ||
-        date === 'ascension' ||
-        date === 'pentecost' ||
-        date === 'whitmonday' ||
-        date === 'corpuschristi') {
+  moment.modifyHolidays.extendParser(function (m, date) {
+    if (date === 'ashwednesday' || date === 'lent' || date === 'goodfriday' || date === 'holysaturday' || date === 'easter' || date === 'eastermonday' || date === 'ascension' || date === 'pentecost' || date === 'whitmonday' || date === 'corpuschristi') {
 
       var e = easter(m.year());
 
-      if (date === 'ashwednesday') { return e.subtract(46, 'days'); }
-      if (date === 'goodfriday') { return e.subtract(2, 'days'); }
-      if (date === 'holysaturday') { return e.subtract(1, 'day'); }
-      if (date === 'easter') { return e; }
-      if (date === 'eastermonday') { return e.add(1, 'day'); }
-      if (date === 'ascension') { return e.add(39, 'days'); }
-      if (date === 'pentecost') { return e.add(49, 'days'); }
-      if (date === 'whitmonday') { return e.add(50, 'days'); }
-      if (date === 'corpuschristi') { return e.add(60, 'days'); }
+      if (date === 'ashwednesday') {
+        return e.subtract(46, 'days');
+      }
+      if (date === 'goodfriday') {
+        return e.subtract(2, 'days');
+      }
+      if (date === 'holysaturday') {
+        return e.subtract(1, 'day');
+      }
+      if (date === 'easter') {
+        return e;
+      }
+      if (date === 'eastermonday') {
+        return e.add(1, 'day');
+      }
+      if (date === 'ascension') {
+        return e.add(39, 'days');
+      }
+      if (date === 'pentecost') {
+        return e.add(49, 'days');
+      }
+      if (date === 'whitmonday') {
+        return e.add(50, 'days');
+      }
+      if (date === 'corpuschristi') {
+        return e.add(60, 'days');
+      }
 
       if (date === 'lent') {
         var lent = [];
@@ -17784,21 +17793,22 @@ return zhTw;
     }
   });
 
-  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
+  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+    module.exports = moment;
+  }
 }).call(this);
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 131 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js locale configuration
 //! locale : Finland
 //! author : Kodie Grantham : https://github.com/kodie
 
-(function() {
-  var moment = ( true) ? __webpack_require__(0) : this.moment;
+(function () {
+  var moment =  true ? __webpack_require__(0) : this.moment;
 
   moment.holidays.finland = {
     "Uudenvuodenpäivä": {
@@ -17849,13 +17859,14 @@ return zhTw;
     }
   };
 
-  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
+  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+    module.exports = moment;
+  }
 }).call(this);
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 132 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js locale configuration
@@ -17875,8 +17886,8 @@ return zhTw;
       TH : Thüringen
 */
 
-(function() {
-  var moment = ( true) ? __webpack_require__(0) : this.moment;
+(function () {
+  var moment =  true ? __webpack_require__(0) : this.moment;
 
   moment.holidays.germany = {
     "Neujahrstag": {
@@ -17959,47 +17970,48 @@ return zhTw;
     }
   };
 
-  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
+  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+    module.exports = moment;
+  }
 }).call(this);
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 133 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(134);
-module.exports = __webpack_require__(172);
+__webpack_require__(132);
+module.exports = __webpack_require__(171);
 
 
 /***/ }),
-/* 134 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(135);
+__webpack_require__(133);
 
-window.Vue = __webpack_require__(159);
+window.Vue = __webpack_require__(157);
 
-Vue.component('example', __webpack_require__(160));
+Vue.component('example', __webpack_require__(158));
 
 var app = new Vue({
     el: '#app'
 });
 
 /***/ }),
-/* 135 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
-window._ = __webpack_require__(136);
+window._ = __webpack_require__(134);
 
 try {
-    window.$ = window.jQuery = __webpack_require__(137);
+    window.$ = window.jQuery = __webpack_require__(135);
 
-    __webpack_require__(138);
+    __webpack_require__(136);
 } catch (e) {}
 
-window.calendar = __webpack_require__(7);
-window.axios = __webpack_require__(139);
+window.calendar = __webpack_require__(5);
+window.axios = __webpack_require__(137);
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 var token = document.head.querySelector('meta[name="csrf-token"]');
@@ -18011,7 +18023,7 @@ if (token) {
 }
 
 /***/ }),
-/* 136 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -35100,10 +35112,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(2)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(2)(module)))
 
 /***/ }),
-/* 137 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -45363,7 +45375,7 @@ return jQuery;
 
 
 /***/ }),
-/* 138 */
+/* 136 */
 /***/ (function(module, exports) {
 
 /*!
@@ -47746,22 +47758,22 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 139 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(140);
+module.exports = __webpack_require__(138);
 
 /***/ }),
-/* 140 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(1);
-var bind = __webpack_require__(8);
-var Axios = __webpack_require__(142);
-var defaults = __webpack_require__(5);
+var bind = __webpack_require__(6);
+var Axios = __webpack_require__(140);
+var defaults = __webpack_require__(3);
 
 /**
  * Create an instance of Axios
@@ -47794,15 +47806,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(12);
-axios.CancelToken = __webpack_require__(157);
-axios.isCancel = __webpack_require__(11);
+axios.Cancel = __webpack_require__(10);
+axios.CancelToken = __webpack_require__(155);
+axios.isCancel = __webpack_require__(9);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(158);
+axios.spread = __webpack_require__(156);
 
 module.exports = axios;
 
@@ -47811,7 +47823,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 141 */
+/* 139 */
 /***/ (function(module, exports) {
 
 /*!
@@ -47838,18 +47850,18 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 142 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(5);
+var defaults = __webpack_require__(3);
 var utils = __webpack_require__(1);
-var InterceptorManager = __webpack_require__(152);
-var dispatchRequest = __webpack_require__(153);
-var isAbsoluteURL = __webpack_require__(155);
-var combineURLs = __webpack_require__(156);
+var InterceptorManager = __webpack_require__(150);
+var dispatchRequest = __webpack_require__(151);
+var isAbsoluteURL = __webpack_require__(153);
+var combineURLs = __webpack_require__(154);
 
 /**
  * Create a new instance of Axios
@@ -47931,7 +47943,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 143 */
+/* 141 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -48121,7 +48133,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 144 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48140,13 +48152,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 145 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(10);
+var createError = __webpack_require__(8);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -48173,7 +48185,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 146 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48201,7 +48213,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 147 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48276,7 +48288,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 148 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48320,7 +48332,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 149 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48395,7 +48407,7 @@ module.exports = (
 
 
 /***/ }),
-/* 150 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48438,7 +48450,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 151 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48498,7 +48510,7 @@ module.exports = (
 
 
 /***/ }),
-/* 152 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48557,16 +48569,16 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 153 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(1);
-var transformData = __webpack_require__(154);
-var isCancel = __webpack_require__(11);
-var defaults = __webpack_require__(5);
+var transformData = __webpack_require__(152);
+var isCancel = __webpack_require__(9);
+var defaults = __webpack_require__(3);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -48643,7 +48655,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 154 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48670,7 +48682,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 155 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48691,7 +48703,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 156 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48712,13 +48724,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 157 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(12);
+var Cancel = __webpack_require__(10);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -48776,7 +48788,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 158 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48810,7 +48822,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 159 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58902,22 +58914,22 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 160 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(161)
+  __webpack_require__(159)
 }
-var Component = __webpack_require__(166)(
+var Component = __webpack_require__(164)(
   /* script */
-  __webpack_require__(167),
+  __webpack_require__(165),
   /* template */
-  __webpack_require__(171),
+  __webpack_require__(170),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -58949,17 +58961,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 161 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(162);
+var content = __webpack_require__(160);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(164)("51183a02", content, false);
+var update = __webpack_require__(162)("51183a02", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -58975,21 +58987,21 @@ if(false) {
 }
 
 /***/ }),
-/* 162 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(163)(undefined);
+exports = module.exports = __webpack_require__(161)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "\n.calendar .month-container[data-v-e95e8324] {\n  height: 230px;\n}\n.calendar table.month tr td .day-content[data-v-e95e8324] {\n  padding: 3px 6px;\n}\n.calendar table.month tr td .day-content.cn-holiday.us-holiday.uk-holiday[data-v-e95e8324] {\n  background-image: linear-gradient(green 33.33%, blue 33.33%, blue 66.66%, red 66.66%);\n}\n.calendar table.month tr td .day-content.us-holiday.uk-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, green, green 50%, blue 50%, blue);\n}\n.calendar table.month tr td .day-content.us-holiday.un-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, green, green 50%, red 50%, red);\n}\n.calendar table.month tr td .day-content.cn-holiday.uk-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, red, red 50%, blue 50%, blue);\n}\n.calendar table.month tr td .day-content.us-holiday[data-v-e95e8324] {\n  color: white;\n  background-color: green;\n  -webkit-border-radius: 15px;\n  -moz-border-radius: 15px;\n  border-radius: 15px;\n}\n.calendar table.month tr td .day-content.uk-holiday[data-v-e95e8324] {\n  color: white;\n  background-color: blue;\n  -webkit-border-radius: 15px;\n  -moz-border-radius: 15px;\n  border-radius: 15px;\n}\n.calendar table.month tr td .day-content.cn-holiday[data-v-e95e8324] {\n  color: white;\n  background-color: red;\n  -webkit-border-radius: 15px;\n  -moz-border-radius: 15px;\n  border-radius: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.calendar .month-container[data-v-e95e8324] {\n  height: 230px;\n}\n.calendar table.month tr td .day-content[data-v-e95e8324] {\n  padding: 3px 6px;\n}\n.calendar table.month tr td .day-content.us-holiday[data-v-e95e8324], .calendar table.month tr td .day-content.uk-holiday[data-v-e95e8324], .calendar table.month tr td .day-content.cn-holiday[data-v-e95e8324], .calendar table.month tr td .day-content.jp-holiday[data-v-e95e8324] {\n  -webkit-border-radius: 15px;\n  -moz-border-radius: 15px;\n  border-radius: 15px;\n}\n.calendar table.month tr td .day-content.us-holiday.uk-holiday.eu-holiday[data-v-e95e8324] {\n  background-image: linear-gradient(green 33.33%, blue 33.33%, blue 66.66%, yellow 66.66%);\n}\n.calendar table.month tr td .day-content.us-holiday.uk-holiday.eu-holiday.cn-holiday[data-v-e95e8324] {\n    border: 1px solid black;\n}\n.calendar table.month tr td .day-content.eu-holiday.uk-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, yellow, yellow 50%, blue 50%, blue);\n}\n.calendar table.month tr td .day-content.us-holiday.uk-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, green, green 50%, blue 50%, blue);\n}\n.calendar table.month tr td .day-content.jp-holiday.uk-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, red, red 50%, blue 50%, blue);\n}\n.calendar table.month tr td .day-content.jp-holiday.us-holiday[data-v-e95e8324] {\n  background: -webkit-linear-gradient(top, red, red 50%, green 50%, green);\n}\n.calendar table.month tr td .day-content.eu-holiday[data-v-e95e8324] {\n  color: black;\n  background-color: yellow;\n}\n.calendar table.month tr td .day-content.us-holiday[data-v-e95e8324] {\n  color: white;\n  background-color: green;\n}\n.calendar table.month tr td .day-content.uk-holiday[data-v-e95e8324] {\n  color: white;\n  background-color: blue;\n}\n.calendar table.month tr td .day-content.jp-holiday[data-v-e95e8324] {\n  color: white;\n  background-color: red;\n}\n.calendar table.month tr td .day-content.cn-holiday[data-v-e95e8324] {\n  border: 1px solid black;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 163 */
+/* 161 */
 /***/ (function(module, exports) {
 
 /*
@@ -59071,7 +59083,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 164 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -59090,7 +59102,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(165)
+var listToStyles = __webpack_require__(163)
 
 /*
 type StyleObject = {
@@ -59292,7 +59304,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 165 */
+/* 163 */
 /***/ (function(module, exports) {
 
 /**
@@ -59325,7 +59337,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 166 */
+/* 164 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -59422,19 +59434,32 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 167 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment_holiday__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment_holiday___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment_holiday__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment_lunar__ = __webpack_require__(183);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment_lunar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment_lunar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_year_calendar__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_year_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_year_calendar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vendor_moment_holiday_moment_holiday__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vendor_moment_holiday_moment_holiday___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__vendor_moment_holiday_moment_holiday__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vendor_moment_lunar_moment_lunar__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vendor_moment_lunar_moment_lunar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__vendor_moment_lunar_moment_lunar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vendor_bootstrap_year_calendar_js_bootstrap_year_calendar__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vendor_bootstrap_year_calendar_js_bootstrap_year_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__vendor_bootstrap_year_calendar_js_bootstrap_year_calendar__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -59512,11 +59537,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         $('#calendar').calendar({
             weekStart: 1,
             customDayRenderer: function customDayRenderer(element, date) {
+                checkDateAndMonth(element, date, 'us-holiday uk-holiday cn-holiday', 0, 1);
+                checkHoliday(element, date, 'us-holiday uk-holiday eu-holiday', 'Good Friday');
+                checkHoliday(element, date, 'uk-holiday eu-holiday cn-holiday', 'Easter Sunday');
+                checkNthDayOfMonth(element, date, 'uk-holiday cn-holiday eu-holiday', 4, 1, 1);
+
                 // US days
-                checkDateAndMonth(element, date, 'us-holiday', 0, 1);
                 checkNthDayOfMonth(element, date, 'us-holiday', 0, 3, 1);
                 checkNthDayOfMonth(element, date, 'us-holiday', 1, 3, 1);
-                checkHoliday(element, date, 'us-holiday', 'Good Friday');
                 checkLastDayOfMonth(element, date, 'us-holiday', 4);
                 checkDateAndMonth(element, date, 'us-holiday', 6, 4);
                 checkNthDayOfMonth(element, date, 'us-holiday', 8, 1, 1);
@@ -59526,10 +59554,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 checkDateAndMonth(element, date, 'us-holiday', 11, 25);
 
                 // UK days
-                checkDateAndMonth(element, date, 'uk-holiday', 0, 1);
-                checkHoliday(element, date, 'uk-holiday', 'Good Friday');
                 checkHoliday(element, date, 'uk-holiday', 'Easter Monday');
-                checkNthDayOfMonth(element, date, 'uk-holiday', 4, 1, 1);
                 checkLastDayOfMonth(element, date, 'uk-holiday', 4);
                 checkLastDayOfMonth(element, date, 'uk-holiday', 7);
                 checkDateAndMonth(element, date, 'uk-holiday', 11, 25);
@@ -59538,14 +59563,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 // China days
                 var limit = 6;
                 for (var i = 1; i < limit; i++) {
-                    console.log(i);
-                    var lunarDate = __WEBPACK_IMPORTED_MODULE_2_moment_lunar___default()().year(__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).year()).month(0).date(i).solar();
+                    var lunarDate = __WEBPACK_IMPORTED_MODULE_2__vendor_moment_lunar_moment_lunar___default()().year(__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).year()).month(0).date(i).solar();
                     if (lunarDate.day() === 0) {
                         limit++;
                     }
                     checkLunarDateAndMonth(element, date, 'cn-holiday', 0, i);
                 }
-                checkNthDayOfMonth(element, date, 'cn-holiday', 4, 1, 1);
+                checkLunarDateAndMonth(element, date, 'cn-holiday', 4, 4);
+
+                limit = 6;
+                for (var _i = 1; _i < limit; _i++) {
+                    var _lunarDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()().year(__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).year()).month(9).date(_i);
+                    if (_lunarDate.day() === 0 || _lunarDate.day() === 6) {
+                        limit++;
+                    }
+                    checkDateAndMonth(element, date, 'cn-holiday', 9, _i);
+                }
+
+                // Japan days
+                checkNthDayOfMonth(element, date, 'jp-holiday', 0, 2, 1);
+                if (__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).isLeapYear()) {
+                    checkDateAndMonth(element, date, 'jp-holiday', 2, 21);
+                } else {
+                    checkDateAndMonth(element, date, 'jp-holiday', 2, 20);
+                }
+                limit = 3 + 3;
+                for (var _i2 = 3; _i2 < limit; _i2++) {
+                    var momentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()().year(__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).year()).month(4).date(_i2);
+                    if (momentDate.day() === 0 || momentDate.day() === 6) {
+                        limit++;
+                    }
+                    checkDateAndMonth(element, date, 'jp-holiday', 4, _i2);
+                }
+
+                checkNthDayOfMonth(element, date, 'jp-holiday', 6, 3, 1);
+                checkDateAndMonth(element, date, 'jp-holiday', 7, 11);
+                checkNthDayOfMonth(element, date, 'jp-holiday', 8, 3, 1);
+                checkNthDayOfMonth(element, date, 'jp-holiday', 9, 2, 1);
+                checkDateAndMonth(element, date, 'jp-holiday', 10, 3);
+                checkDateAndMonth(element, date, 'jp-holiday', 10, 23);
+                checkDateAndMonth(element, date, 'jp-holiday', 11, 23);
             },
             renderEnd: function renderEnd() {
                 $('#calendar *').attr(_this.$options._scopeId, '');
@@ -59557,8 +59614,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 function checkDateAndMonth(element, date, selector, month, day) {
     var momentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()(date);
     if (momentDate.month() === month) {
-        if (momentDate.day() !== 0 && momentDate.day() !== 6) {
-            if (momentDate.date() === day || momentDate.day() === 1 && momentDate.subtract(1, 'd').date() === day || momentDate.day() === 5 && momentDate.add(1, 'd').date() === day) {
+        if (momentDate.day() !== 0 && (selector === 'jp-holiday' || momentDate.day() !== 6)) {
+            if (momentDate.date() === day || momentDate.day() === 1 && momentDate.subtract(1, 'd').date() === day || selector !== 'jp-holiday' && momentDate.day() === 5 && momentDate.add(1, 'd').date() === day) {
                 $(element).addClass(selector);
             }
         }
@@ -59568,10 +59625,10 @@ function checkDateAndMonth(element, date, selector, month, day) {
 function checkLunarDateAndMonth(element, date, selector, month, day) {
     var momentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()(date);
 
-    var lunarDate = __WEBPACK_IMPORTED_MODULE_2_moment_lunar___default()().year(__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).year()).month(month).date(day).solar();
+    var lunarDate = __WEBPACK_IMPORTED_MODULE_2__vendor_moment_lunar_moment_lunar___default()().year(__WEBPACK_IMPORTED_MODULE_0_moment___default()(date).year()).month(month).date(day).solar();
     if (momentDate.month() === lunarDate.month()) {
-        if (momentDate.day() !== 0) {
-            if (momentDate.date() === lunarDate.date() || momentDate.day() === 1 && momentDate.subtract(1, 'd').date() === lunarDate.date()) {
+        if (momentDate.day() !== 0 && momentDate.day() !== 6) {
+            if (momentDate.date() === lunarDate.date() || momentDate.day() === 1 && momentDate.subtract(1, 'd').date() === lunarDate.date() || momentDate.day() === 5 && momentDate.add(1, 'd').date() === lunarDate.date()) {
                 $(element).addClass(selector);
             }
         }
@@ -59583,8 +59640,8 @@ function checkNthDayOfMonth(element, date, selector, month, nth, day) {
 
     if (momentDate.month() === month) {
         var nthDate = _getNth(date, nth, day);
-        if (momentDate.day() !== 0 && momentDate.day() !== 6) {
-            if (momentDate.date() === nthDate.date() || momentDate.day() === 1 && momentDate.subtract(1, 'd').date() === nthDate.date() || momentDate.day() === 5 && momentDate.add(1, 'd').date() === nthDate.date()) {
+        if (momentDate.day() !== 0 && (selector === 'jp-holiday' || momentDate.day() !== 6)) {
+            if (momentDate.date() === nthDate.date() || momentDate.day() === 1 && momentDate.subtract(1, 'd').date() === nthDate.date() || selector !== 'jp-holiday' && momentDate.day() === 5 && momentDate.add(1, 'd').date() === nthDate.date()) {
                 $(element).addClass(selector);
             }
         }
@@ -59606,7 +59663,7 @@ function checkLastDayOfMonth(element, date, selector, month) {
 
 function checkHoliday(element, date, selector, holiday) {
     var momentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()(date);
-    var goodFridayDate = __WEBPACK_IMPORTED_MODULE_1_moment_holiday___default()(date).holiday(holiday);
+    var goodFridayDate = __WEBPACK_IMPORTED_MODULE_1__vendor_moment_holiday_moment_holiday___default()(date).holiday(holiday);
 
     if (momentDate.month() === goodFridayDate.month()) {
         if (momentDate.day() !== 0 && momentDate.day() !== 6) {
@@ -59628,240 +59685,1074 @@ function _getNth(date, nth, day) {
 }
 
 /***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 11,
+	"./af.js": 11,
+	"./ar": 12,
+	"./ar-dz": 13,
+	"./ar-dz.js": 13,
+	"./ar-kw": 14,
+	"./ar-kw.js": 14,
+	"./ar-ly": 15,
+	"./ar-ly.js": 15,
+	"./ar-ma": 16,
+	"./ar-ma.js": 16,
+	"./ar-sa": 17,
+	"./ar-sa.js": 17,
+	"./ar-tn": 18,
+	"./ar-tn.js": 18,
+	"./ar.js": 12,
+	"./az": 19,
+	"./az.js": 19,
+	"./be": 20,
+	"./be.js": 20,
+	"./bg": 21,
+	"./bg.js": 21,
+	"./bn": 22,
+	"./bn.js": 22,
+	"./bo": 23,
+	"./bo.js": 23,
+	"./br": 24,
+	"./br.js": 24,
+	"./bs": 25,
+	"./bs.js": 25,
+	"./ca": 26,
+	"./ca.js": 26,
+	"./cs": 27,
+	"./cs.js": 27,
+	"./cv": 28,
+	"./cv.js": 28,
+	"./cy": 29,
+	"./cy.js": 29,
+	"./da": 30,
+	"./da.js": 30,
+	"./de": 31,
+	"./de-at": 32,
+	"./de-at.js": 32,
+	"./de-ch": 33,
+	"./de-ch.js": 33,
+	"./de.js": 31,
+	"./dv": 34,
+	"./dv.js": 34,
+	"./el": 35,
+	"./el.js": 35,
+	"./en-au": 36,
+	"./en-au.js": 36,
+	"./en-ca": 37,
+	"./en-ca.js": 37,
+	"./en-gb": 38,
+	"./en-gb.js": 38,
+	"./en-ie": 39,
+	"./en-ie.js": 39,
+	"./en-nz": 40,
+	"./en-nz.js": 40,
+	"./eo": 41,
+	"./eo.js": 41,
+	"./es": 42,
+	"./es-do": 43,
+	"./es-do.js": 43,
+	"./es.js": 42,
+	"./et": 44,
+	"./et.js": 44,
+	"./eu": 45,
+	"./eu.js": 45,
+	"./fa": 46,
+	"./fa.js": 46,
+	"./fi": 47,
+	"./fi.js": 47,
+	"./fo": 48,
+	"./fo.js": 48,
+	"./fr": 49,
+	"./fr-ca": 50,
+	"./fr-ca.js": 50,
+	"./fr-ch": 51,
+	"./fr-ch.js": 51,
+	"./fr.js": 49,
+	"./fy": 52,
+	"./fy.js": 52,
+	"./gd": 53,
+	"./gd.js": 53,
+	"./gl": 54,
+	"./gl.js": 54,
+	"./gom-latn": 55,
+	"./gom-latn.js": 55,
+	"./he": 56,
+	"./he.js": 56,
+	"./hi": 57,
+	"./hi.js": 57,
+	"./hr": 58,
+	"./hr.js": 58,
+	"./hu": 59,
+	"./hu.js": 59,
+	"./hy-am": 60,
+	"./hy-am.js": 60,
+	"./id": 61,
+	"./id.js": 61,
+	"./is": 62,
+	"./is.js": 62,
+	"./it": 63,
+	"./it.js": 63,
+	"./ja": 64,
+	"./ja.js": 64,
+	"./jv": 65,
+	"./jv.js": 65,
+	"./ka": 66,
+	"./ka.js": 66,
+	"./kk": 67,
+	"./kk.js": 67,
+	"./km": 68,
+	"./km.js": 68,
+	"./kn": 69,
+	"./kn.js": 69,
+	"./ko": 70,
+	"./ko.js": 70,
+	"./ky": 71,
+	"./ky.js": 71,
+	"./lb": 72,
+	"./lb.js": 72,
+	"./lo": 73,
+	"./lo.js": 73,
+	"./lt": 74,
+	"./lt.js": 74,
+	"./lv": 75,
+	"./lv.js": 75,
+	"./me": 76,
+	"./me.js": 76,
+	"./mi": 77,
+	"./mi.js": 77,
+	"./mk": 78,
+	"./mk.js": 78,
+	"./ml": 79,
+	"./ml.js": 79,
+	"./mr": 80,
+	"./mr.js": 80,
+	"./ms": 81,
+	"./ms-my": 82,
+	"./ms-my.js": 82,
+	"./ms.js": 81,
+	"./my": 83,
+	"./my.js": 83,
+	"./nb": 84,
+	"./nb.js": 84,
+	"./ne": 85,
+	"./ne.js": 85,
+	"./nl": 86,
+	"./nl-be": 87,
+	"./nl-be.js": 87,
+	"./nl.js": 86,
+	"./nn": 88,
+	"./nn.js": 88,
+	"./pa-in": 89,
+	"./pa-in.js": 89,
+	"./pl": 90,
+	"./pl.js": 90,
+	"./pt": 91,
+	"./pt-br": 92,
+	"./pt-br.js": 92,
+	"./pt.js": 91,
+	"./ro": 93,
+	"./ro.js": 93,
+	"./ru": 94,
+	"./ru.js": 94,
+	"./sd": 95,
+	"./sd.js": 95,
+	"./se": 96,
+	"./se.js": 96,
+	"./si": 97,
+	"./si.js": 97,
+	"./sk": 98,
+	"./sk.js": 98,
+	"./sl": 99,
+	"./sl.js": 99,
+	"./sq": 100,
+	"./sq.js": 100,
+	"./sr": 101,
+	"./sr-cyrl": 102,
+	"./sr-cyrl.js": 102,
+	"./sr.js": 101,
+	"./ss": 103,
+	"./ss.js": 103,
+	"./sv": 104,
+	"./sv.js": 104,
+	"./sw": 105,
+	"./sw.js": 105,
+	"./ta": 106,
+	"./ta.js": 106,
+	"./te": 107,
+	"./te.js": 107,
+	"./tet": 108,
+	"./tet.js": 108,
+	"./th": 109,
+	"./th.js": 109,
+	"./tl-ph": 110,
+	"./tl-ph.js": 110,
+	"./tlh": 111,
+	"./tlh.js": 111,
+	"./tr": 112,
+	"./tr.js": 112,
+	"./tzl": 113,
+	"./tzl.js": 113,
+	"./tzm": 114,
+	"./tzm-latn": 115,
+	"./tzm-latn.js": 115,
+	"./tzm.js": 114,
+	"./uk": 116,
+	"./uk.js": 116,
+	"./ur": 117,
+	"./ur.js": 117,
+	"./uz": 118,
+	"./uz-latn": 119,
+	"./uz-latn.js": 119,
+	"./uz.js": 118,
+	"./vi": 120,
+	"./vi.js": 120,
+	"./x-pseudo": 121,
+	"./x-pseudo.js": 121,
+	"./yo": 122,
+	"./yo.js": 122,
+	"./zh-cn": 123,
+	"./zh-cn.js": 123,
+	"./zh-hk": 124,
+	"./zh-hk.js": 124,
+	"./zh-tw": 125,
+	"./zh-tw.js": 125
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 166;
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js
+//! version : 1.4.2
+//! author : Kodie Grantham
+//! license : MIT
+//! https://github.com/kodie/moment-holiday
+
+(function () {
+    var moment =  true ? __webpack_require__(0) : this.moment;
+
+    moment.holidays = {};
+    moment.holidays.active = {};
+    moment.holidays.active_last = {};
+
+    moment.holidays.us = {
+        "New Year's Day": {
+            date: '1/1',
+            keywords: ['new'],
+            keywords_y: ['year'],
+            keywords_n: ['eve']
+        },
+        "Martin Luther King Jr. Day": {
+            date: '1/(1,3)',
+            keywords: ['martin', 'luther', 'king', 'jr[\\s\\.]', 'mlk']
+        },
+        "Valentine's Day": {
+            date: '2/14',
+            keywords_y: ['valentine']
+        },
+        "Washington's Birthday": {
+            date: '2/(1,3)',
+            keywords: ['george', 'washington', 'president']
+        },
+        "Saint Patrick's Day": {
+            date: '3/17',
+            keywords: ['patrick', 'saint', 'st[\\s\\.]', 'paddy', 'patty']
+        },
+        "Good Friday": {
+            date: 'goodfriday',
+            keywords_y: ['good', 'friday']
+        },
+        "Easter Sunday": {
+            date: 'easter',
+            keywords_y: ['easter'],
+            keywords: ['sunday']
+        },
+        "Memorial Day": {
+            date: '5/(1,-1)',
+            keywords_y: ['memorial']
+        },
+        "Mother's Day": {
+            date: '5/(0,2)',
+            keywords: ['mother', 'mom']
+        },
+        "Father's Day": {
+            date: '6/(0,3)',
+            keywords: ['father', 'dad']
+        },
+        "Independence Day": {
+            date: '7/4',
+            keywords: ['independence', '4th', 'fourth', 'july']
+        },
+        "Labor Day": {
+            date: '9/(1,1)',
+            keywords: ['labor', 'labour']
+        },
+        "Columbus Day": {
+            date: '10/(1,2)',
+            keywords: ['columbus', 'christopher']
+        },
+        "Halloween": {
+            date: '10/31',
+            keywords_y: ['halloween']
+        },
+        "Veteran's Day": {
+            date: '11/11',
+            keywords: ['veteran', 'vet']
+        },
+        "Thanksgiving Day": {
+            date: '11/(4,4)',
+            keywords: ['thanksgiving', 'thanks', 'turkey'],
+            keywords_n: ['after']
+        },
+        "Day after Thanksgiving": {
+            date: '11/(5,4)',
+            keywords: ['thanksgiving', 'thanks', 'turkey'],
+            keywords_y: ['after']
+        },
+        "Christmas Eve": {
+            date: '12/24',
+            keywords: ['christmas', 'christ', 'x-?mas'],
+            keywords_y: ['eve']
+        },
+        "Christmas Day": {
+            date: '12/25',
+            keywords: ['christmas', 'christ', 'x-?mas'],
+            keywords_n: ['eve']
+        },
+        "New Year's Eve": {
+            date: '12/31',
+            keywords: ['new'],
+            keywords_y: ['year', 'eve']
+        }
+    };
+
+    var parserExtensions = [];
+
+    var parseHoliday = function parseHoliday(self, date, adjust) {
+        var days = [];
+
+        for (var i = 0; i < parserExtensions.length; i++) {
+            var pe = parserExtensions[i](self, date);
+            if (pe || pe === false) {
+                days = pe;
+            }
+        }
+
+        if (days === false) {
+            return false;
+        }
+
+        if (!moment.isMoment(days) && !days.length && date.charAt(0).match(/[0-9(]/)) {
+            var range = false;
+            var dates = date.split('|');
+
+            if (dates.length > 1) {
+                range = true;
+            }
+            if (dates.length > 2) {
+                dates = [dates[0], dates[1]];
+            }
+
+            for (var i = 0; i < dates.length; i++) {
+                var m = moment(self);
+                var ds = dates[i].split('/');
+
+                if (ds.length === 1 || ds.length === 2 && ds[1].charAt(0) !== '(' && ds[1].length === 4) {
+                    var td = dates[i];
+                    i = -1;
+                    dates = [];
+                    for (var ii = 1; ii < 13; ii++) {
+                        dates.push(ii + '/' + td);
+                    }
+                    continue;
+                }
+
+                if (ds.length > 2) {
+                    m.year(parseInt(ds[2]));
+                }
+
+                m.month(parseInt(ds[0]) - 1);
+
+                if (ds[1].charAt(0) === '(') {
+                    var w = ds[1].slice(1, -1).split(',');
+                    var wd = parseInt(w[0]);
+                    var dt = parseInt(w[1]);
+                    var d = moment(m).startOf('month');
+                    var limit = moment(m).endOf('month').diff(d, 'days') + 1;
+                    var wds = [];
+
+                    if (w[1] && w[1].charAt(0) === '[') {
+                        var forward = true;
+                        dt = parseInt(w[1].slice(1, -1));
+
+                        if (dt < 0) {
+                            forward = false;
+                            dt = parseInt(w[1].slice(2, -1));
+                        }
+
+                        d = moment(m).date(dt);
+
+                        for (var wi = 0; wi < 6; wi++) {
+                            if (d.day() === wd) {
+                                days.push(moment(d));
+                                break;
+                            }
+
+                            if (forward) {
+                                d.add(1, 'day');
+                            } else {
+                                d.subtract(1, 'day');
+                            }
+                        }
+
+                        continue;
+                    }
+
+                    for (var ai = 0; ai < limit; ai++) {
+                        if (d.day() === wd) {
+                            wds.push(moment(d));
+                        }
+                        d.add(1, 'day');
+                    }
+
+                    if (!dt) {
+                        days = days.concat(wds);
+                        continue;
+                    } else if (dt < 0) {
+                        m = wds[wds.length + dt];
+                    } else {
+                        m = wds[dt - 1];
+                    }
+
+                    days.push(m);
+                } else {
+                    days.push(m.date(ds[1]));
+                }
+            }
+
+            if (range && days.length > 1) {
+                var diff = days[1].diff(days[0], 'days');
+
+                if (diff > 1) {
+                    var di = moment(days[0]);
+                    days = [days[0]];
+
+                    for (var i = 0; i < diff; i++) {
+                        di.add(1, 'day');
+                        days.push(moment(di));
+                    }
+                }
+            }
+        }
+
+        days = arrayify(days);
+
+        for (var i = 0; i < days.length; i++) {
+            if (!moment.isMoment(days[i])) {
+                delete days[i];
+                continue;
+            }
+
+            if (adjust) {
+                if (days[i].day() === 0) {
+                    days[i] = days[i].add(1, 'day');
+                }
+                if (days[i].day() === 6) {
+                    days[i] = days[i].subtract(1, 'day');
+                }
+            }
+
+            days[i] = days[i].startOf('day');
+        }
+
+        if (!days.length) {
+            return false;
+        }
+        if (days.length === 1) {
+            return days[0];
+        }
+
+        return days;
+    };
+
+    var keywordMatches = function keywordMatches(str, kw) {
+        var m = [];
+        kw = arrayify(kw);
+
+        for (var i = 0; i < kw.length; i++) {
+            var f = str.match(new RegExp(kw[i], 'gi'));
+            if (f) {
+                m = m.concat(f);
+            }
+        }
+
+        return m;
+    };
+
+    var findHoliday = function findHoliday(self, holiday, adjust, parse, holidayObj) {
+        var pt = {};
+        var wn = [];
+        var obj = {};
+
+        var h = holidayObj || moment.holidays.active;
+
+        if (h.hasOwnProperty(holiday)) {
+            wn.push(holiday);
+        } else if (fk = findKey(holiday, h)) {
+            wn.push(fk);
+        } else {
+            for (var hd in h) {
+                if (!h.hasOwnProperty(hd)) {
+                    continue;
+                }
+
+                pt[hd] = 0;
+
+                if (h[hd].keywords_n) {
+                    var matchesN = keywordMatches(holiday, h[hd].keywords_n);
+                    if (matchesN.length) {
+                        pt[hd] = 0;
+                        continue;
+                    }
+                }
+
+                if (h[hd].keywords_y) {
+                    var matchesY = keywordMatches(holiday, h[hd].keywords_y);
+                    if (matchesY && matchesY.length === h[hd].keywords_y.length) {
+                        pt[hd] += matchesY.length;
+                    } else {
+                        pt[hd] = 0;
+                        continue;
+                    }
+                }
+
+                if (h[hd].keywords) {
+                    var matches = keywordMatches(holiday, h[hd].keywords);
+                    if (matches) {
+                        pt[hd] += matches.length;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+
+            //console.log(pt); // Display scores
+
+            for (var w in pt) {
+                if (!pt[w] || !pt.hasOwnProperty(w)) {
+                    continue;
+                }
+                if (!wn.length || pt[w] === pt[wn[0]]) {
+                    wn.push(w);
+                    continue;
+                }
+                if (pt[w] > pt[wn[0]]) {
+                    wn = [w];
+                    continue;
+                }
+            }
+        }
+
+        if (!wn.length || wn.length > 1) {
+            return false;
+        }
+
+        if (parse !== false) {
+            var d = parseHoliday(self, h[wn[0]].date, adjust);
+
+            if (d) {
+                obj[wn[0]] = d;
+                return obj;
+            }
+        } else {
+            return wn[0];
+        }
+
+        return false;
+    };
+
+    var findHolidays = function findHolidays(self, holidays, adjust, parse, holidayObj) {
+        var h = {};
+
+        holidays = arrayify(holidays);
+        if (!holidayObj) {
+            holidayObj = moment.holidays.active;
+        }
+
+        for (var i = 0; i < holidays.length; i++) {
+            var find = findHoliday(self, holidays[i], adjust, parse, holidayObj);
+            if (find) {
+                h[find] = holidayObj[find];
+            }
+        }
+
+        return h;
+    };
+
+    var getAllHolidays = function getAllHolidays(self, adjust) {
+        var h = moment.holidays.active;
+        var d = {};
+
+        for (var hd in h) {
+            if (!h.hasOwnProperty(hd)) {
+                continue;
+            }
+            if (td = parseHoliday(self, h[hd].date, adjust)) {
+                d[hd] = td;
+            }
+        }
+
+        return d;
+    };
+
+    var compileRegions = function compileRegions(locale, regions) {
+        var h = moment.holidays[locale];
+        var o = {};
+
+        if (h) {
+            for (var i = 0; i < regions.length; i++) {
+                var r = regions[i].toLowerCase();
+                var l = moment.holidays[locale + '/' + r];
+                l = {};
+
+                for (var hd in h) {
+                    if (!h.hasOwnProperty(hd)) {
+                        continue;
+                    }
+
+                    var y = h[hd].regions || [];
+                    var n = h[hd].regions_n || [];
+
+                    if (y.length) {
+                        y.join().toLowerCase().split();
+                    }
+                    if (n.length) {
+                        n.join().toLowerCase().split();
+                    }
+
+                    if (!y.length && !n.length || y.length && ~y.indexOf(r) || n.length && !~n.indexOf(r)) {
+                        l[hd] = h[hd];
+                    }
+                }
+
+                if (l) {
+                    o = merge(o, l);
+                }
+            }
+        }
+
+        if (!Object.keys(o).length) {
+            return false;
+        }
+
+        return o;
+    };
+
+    var getLocale = function getLocale(locale) {
+        regions = locale.split('/');
+        locale = regions[0].toLowerCase();
+        regions.shift();
+
+        if (!moment.holidays[locale]) {
+            try {
+                __webpack_require__(168)("./" + locale);
+            } catch (e) {}
+        }
+
+        if (moment.holidays[locale]) {
+            if (regions.length) {
+                return compileRegions(locale, regions);
+            }
+            return moment.holidays[locale];
+        }
+
+        return false;
+    };
+
+    var holidayLoop = function holidayLoop(self, count, forward, adjust) {
+        if (!count) {
+            count = 1;
+        }
+
+        var h = getAllHolidays(self, adjust);
+        var l = moment(self);
+        var y = self.year();
+        var w = [];
+
+        for (var i = 0; i < count; i++) {
+            var d = moment(l);
+
+            while (true) {
+                var b = false;
+
+                if (forward) {
+                    d.add(1, 'day');
+                } else {
+                    d.subtract(1, 'day');
+                }
+
+                if (d.year() !== y) {
+                    h = getAllHolidays(d, adjust);
+                    y = d.year();
+                }
+
+                if (!Object.keys(h).length) {
+                    b = true;
+                    break;
+                }
+
+                for (var hd in h) {
+                    if (!h.hasOwnProperty(hd)) {
+                        continue;
+                    }
+
+                    var b2 = false;
+                    var ha = arrayify(h[hd]);
+
+                    for (var hi = 0; hi < ha.length; hi++) {
+                        if (d.isSame(ha[hi], 'day')) {
+                            w.push(ha[hi]);
+                            l = moment(d);
+                            b2 = true;
+                            break;
+                        }
+                    }
+
+                    if (b2) {
+                        b = true;
+                        break;
+                    }
+                }
+
+                if (b) {
+                    break;
+                }
+            }
+        }
+
+        if (!w.length) {
+            return false;
+        }
+        if (w.length === 1) {
+            return w[0];
+        }
+
+        return w;
+    };
+
+    var arrayify = function arrayify(arr) {
+        if (arr && arr.constructor !== Array) {
+            return [arr];
+        }
+        return arr;
+    };
+
+    var findKey = function findKey(find, obj) {
+        if (obj.constructor === Object) {
+            obj = Object.keys(obj);
+        }
+        for (var i = 0; i < obj.length; i++) {
+            if (find.toLowerCase() === obj[i].toLowerCase()) {
+                return obj[i];
+            }
+        }
+        return false;
+    };
+
+    var merge = function merge(o1, o2) {
+        return Object.assign({}, o1, o2);
+    };
+
+    moment.fn.holiday = function (holidays, adjust) {
+        var h = moment.holidays.active;
+        var d = {};
+        var single = false;
+
+        if (!holidays) {
+            return getAllHolidays(this, adjust);
+        }
+
+        if (holidays.constructor !== Array) {
+            single = true;
+            holidays = [holidays];
+        }
+
+        for (var i = 0; i < holidays.length; i++) {
+            if (td = findHoliday(this, holidays[i], adjust)) {
+                d = Object.assign({}, d, td);
+            }
+        }
+
+        var dKeys = Object.keys(d);
+
+        if (!dKeys.length) {
+            return false;
+        }
+        if (dKeys.length === 1 && single) {
+            return d[dKeys[0]];
+        }
+
+        return d;
+    };
+
+    moment.fn.holidays = function (holidays, adjust) {
+        return this.holiday(holidays, adjust);
+    };
+
+    moment.fn.isHoliday = function (holidays, adjust) {
+        var h,
+            returnTitle,
+            hs = [];
+
+        if (holidays) {
+            holidays = arrayify(holidays);
+            h = this.holiday(holidays, adjust);
+            returnTitle = false;
+        } else {
+            h = getAllHolidays(this, adjust);
+            returnTitle = true;
+        }
+
+        if (!h) {
+            return false;
+        }
+
+        for (var hd in h) {
+            if (!h.hasOwnProperty(hd)) {
+                continue;
+            }
+
+            var ha = arrayify(h[hd]);
+
+            for (var hi = 0; hi < ha.length; hi++) {
+                if (this.isSame(ha[hi], 'day')) {
+                    if (returnTitle) {
+                        hs.push(hd);
+                    } else {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        if (hs.length) {
+            if (hs.length === 1) {
+                return hs[0];
+            }
+            return hs;
+        }
+
+        return false;
+    };
+
+    moment.fn.previousHoliday = function (count, adjust) {
+        return holidayLoop(this, count, false, adjust);
+    };
+
+    moment.fn.previousHolidays = function (count, adjust) {
+        return this.previousHoliday(count, adjust);
+    };
+
+    moment.fn.nextHoliday = function (count, adjust) {
+        return holidayLoop(this, count, true, adjust);
+    };
+
+    moment.fn.nextHolidays = function (count, adjust) {
+        return this.nextHoliday(count, adjust);
+    };
+
+    moment.fn.holidaysBetween = function (date, adjust) {
+        if (!date) {
+            date = new Date();
+        }
+        date = moment(date).subtract(1, 'day');
+
+        var h = getAllHolidays(this, adjust);
+        var d = moment(this);
+        var y = d.year();
+        var w = [];
+
+        for (var i = 0; i < date.diff(this, 'days'); i++) {
+            d.add(1, 'day');
+
+            if (d.year() !== y) {
+                h = getAllHolidays(d, adjust);
+                y = d.year();
+            }
+
+            if (!Object.keys(h).length) {
+                break;
+            }
+
+            for (var hd in h) {
+                var b = false;
+                var ha = arrayify(h[hd]);
+
+                for (var hi = 0; hi < ha.length; hi++) {
+                    if (d.isSame(ha[hi], 'day')) {
+                        w.push(ha[hi]);
+                        b = true;
+                        break;
+                    }
+                }
+
+                if (b) {
+                    break;
+                }
+            }
+        }
+
+        if (!w.length) {
+            return false;
+        }
+
+        return w;
+    };
+
+    moment.modifyHolidays = {
+        set: function set(holidays, specifics) {
+            var newH = {};
+
+            if (holidays.constructor === Array) {
+                var hs = [];
+
+                for (var i = 0; i < holidays.length; i++) {
+                    var d = findHoliday(this, holidays[i], null, false);
+                    if (d) {
+                        hs.push(d);
+                    }
+                }
+
+                if (hs.length) {
+                    newH = merge(moment.holidays.active);
+
+                    for (var hd in newH) {
+                        if (!newH.hasOwnProperty(hd)) {
+                            continue;
+                        }
+                        if (!~hs.indexOf(hd)) {
+                            delete newH[hd];
+                        }
+                    }
+                }
+            } else if (typeof holidays === 'string') {
+                var locale = getLocale(holidays);
+
+                if (locale) {
+                    if (specifics) {
+                        newH = findHolidays(this, specifics, null, false, locale);
+                    } else {
+                        newH = merge(locale);
+                    }
+                }
+            } else {
+                newH = holidays;
+            }
+
+            if (Object.keys(newH).length && !Object.is(moment.holidays.active, newH)) {
+                moment.holidays.active_last = merge(moment.holidays.active);
+                moment.holidays.active = newH;
+            }
+
+            return this;
+        },
+
+        add: function add(holidays, specifics) {
+            if (typeof holidays === 'string') {
+                var locale = getLocale(holidays);
+                holidays = {};
+
+                if (locale) {
+                    if (specifics) {
+                        holidays = findHolidays(this, specifics, null, false, locale);
+                    } else {
+                        holidays = locale;
+                    }
+                }
+            }
+
+            if (Object.keys(holidays).length) {
+                moment.holidays.active_last = merge(moment.holidays.active);
+                moment.holidays.active = merge(moment.holidays.active, holidays);
+            }
+
+            return this;
+        },
+
+        remove: function remove(holidays) {
+            holidays = arrayify(holidays);
+
+            var find = findHolidays(this, holidays, null, false);
+            var newH = merge(moment.holidays.active);
+
+            if (find) {
+                for (var hd in find) {
+                    delete newH[hd];
+                }
+            }
+
+            if (!Object.is(moment.holidays.active, newH)) {
+                moment.holidays.active_last = merge(moment.holidays.active);
+                moment.holidays.active = newH;
+            }
+
+            return this;
+        },
+
+        undo: function undo() {
+            var c = merge(moment.holidays.active);
+            moment.holidays.active = merge(moment.holidays.active_last);
+            moment.holidays.active_last = c;
+            return this;
+        },
+
+        extendParser: function extendParser(func) {
+            parserExtensions.push(func);
+            return this;
+        }
+    };
+
+    moment.modifyHolidays.set('US').add('Easter', ['Easter Sunday', 'Good Friday']);
+
+    if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+        module.exports = moment;
+    }
+}).call(this);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
+
+/***/ }),
 /* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 13,
-	"./af.js": 13,
-	"./ar": 14,
-	"./ar-dz": 15,
-	"./ar-dz.js": 15,
-	"./ar-kw": 16,
-	"./ar-kw.js": 16,
-	"./ar-ly": 17,
-	"./ar-ly.js": 17,
-	"./ar-ma": 18,
-	"./ar-ma.js": 18,
-	"./ar-sa": 19,
-	"./ar-sa.js": 19,
-	"./ar-tn": 20,
-	"./ar-tn.js": 20,
-	"./ar.js": 14,
-	"./az": 21,
-	"./az.js": 21,
-	"./be": 22,
-	"./be.js": 22,
-	"./bg": 23,
-	"./bg.js": 23,
-	"./bn": 24,
-	"./bn.js": 24,
-	"./bo": 25,
-	"./bo.js": 25,
-	"./br": 26,
-	"./br.js": 26,
-	"./bs": 27,
-	"./bs.js": 27,
-	"./ca": 28,
-	"./ca.js": 28,
-	"./cs": 29,
-	"./cs.js": 29,
-	"./cv": 30,
-	"./cv.js": 30,
-	"./cy": 31,
-	"./cy.js": 31,
-	"./da": 32,
-	"./da.js": 32,
-	"./de": 33,
-	"./de-at": 34,
-	"./de-at.js": 34,
-	"./de-ch": 35,
-	"./de-ch.js": 35,
-	"./de.js": 33,
-	"./dv": 36,
-	"./dv.js": 36,
-	"./el": 37,
-	"./el.js": 37,
-	"./en-au": 38,
-	"./en-au.js": 38,
-	"./en-ca": 39,
-	"./en-ca.js": 39,
-	"./en-gb": 40,
-	"./en-gb.js": 40,
-	"./en-ie": 41,
-	"./en-ie.js": 41,
-	"./en-nz": 42,
-	"./en-nz.js": 42,
-	"./eo": 43,
-	"./eo.js": 43,
-	"./es": 44,
-	"./es-do": 45,
-	"./es-do.js": 45,
-	"./es.js": 44,
-	"./et": 46,
-	"./et.js": 46,
-	"./eu": 47,
-	"./eu.js": 47,
-	"./fa": 48,
-	"./fa.js": 48,
-	"./fi": 49,
-	"./fi.js": 49,
-	"./fo": 50,
-	"./fo.js": 50,
-	"./fr": 51,
-	"./fr-ca": 52,
-	"./fr-ca.js": 52,
-	"./fr-ch": 53,
-	"./fr-ch.js": 53,
-	"./fr.js": 51,
-	"./fy": 54,
-	"./fy.js": 54,
-	"./gd": 55,
-	"./gd.js": 55,
-	"./gl": 56,
-	"./gl.js": 56,
-	"./gom-latn": 57,
-	"./gom-latn.js": 57,
-	"./he": 58,
-	"./he.js": 58,
-	"./hi": 59,
-	"./hi.js": 59,
-	"./hr": 60,
-	"./hr.js": 60,
-	"./hu": 61,
-	"./hu.js": 61,
-	"./hy-am": 62,
-	"./hy-am.js": 62,
-	"./id": 63,
-	"./id.js": 63,
-	"./is": 64,
-	"./is.js": 64,
-	"./it": 65,
-	"./it.js": 65,
-	"./ja": 66,
-	"./ja.js": 66,
-	"./jv": 67,
-	"./jv.js": 67,
-	"./ka": 68,
-	"./ka.js": 68,
-	"./kk": 69,
-	"./kk.js": 69,
-	"./km": 70,
-	"./km.js": 70,
-	"./kn": 71,
-	"./kn.js": 71,
-	"./ko": 72,
-	"./ko.js": 72,
-	"./ky": 73,
-	"./ky.js": 73,
-	"./lb": 74,
-	"./lb.js": 74,
-	"./lo": 75,
-	"./lo.js": 75,
-	"./lt": 76,
-	"./lt.js": 76,
-	"./lv": 77,
-	"./lv.js": 77,
-	"./me": 78,
-	"./me.js": 78,
-	"./mi": 79,
-	"./mi.js": 79,
-	"./mk": 80,
-	"./mk.js": 80,
-	"./ml": 81,
-	"./ml.js": 81,
-	"./mr": 82,
-	"./mr.js": 82,
-	"./ms": 83,
-	"./ms-my": 84,
-	"./ms-my.js": 84,
-	"./ms.js": 83,
-	"./my": 85,
-	"./my.js": 85,
-	"./nb": 86,
-	"./nb.js": 86,
-	"./ne": 87,
-	"./ne.js": 87,
-	"./nl": 88,
-	"./nl-be": 89,
-	"./nl-be.js": 89,
-	"./nl.js": 88,
-	"./nn": 90,
-	"./nn.js": 90,
-	"./pa-in": 91,
-	"./pa-in.js": 91,
-	"./pl": 92,
-	"./pl.js": 92,
-	"./pt": 93,
-	"./pt-br": 94,
-	"./pt-br.js": 94,
-	"./pt.js": 93,
-	"./ro": 95,
-	"./ro.js": 95,
-	"./ru": 96,
-	"./ru.js": 96,
-	"./sd": 97,
-	"./sd.js": 97,
-	"./se": 98,
-	"./se.js": 98,
-	"./si": 99,
-	"./si.js": 99,
-	"./sk": 100,
-	"./sk.js": 100,
-	"./sl": 101,
-	"./sl.js": 101,
-	"./sq": 102,
-	"./sq.js": 102,
-	"./sr": 103,
-	"./sr-cyrl": 104,
-	"./sr-cyrl.js": 104,
-	"./sr.js": 103,
-	"./ss": 105,
-	"./ss.js": 105,
-	"./sv": 106,
-	"./sv.js": 106,
-	"./sw": 107,
-	"./sw.js": 107,
-	"./ta": 108,
-	"./ta.js": 108,
-	"./te": 109,
-	"./te.js": 109,
-	"./tet": 110,
-	"./tet.js": 110,
-	"./th": 111,
-	"./th.js": 111,
-	"./tl-ph": 112,
-	"./tl-ph.js": 112,
-	"./tlh": 113,
-	"./tlh.js": 113,
-	"./tr": 114,
-	"./tr.js": 114,
-	"./tzl": 115,
-	"./tzl.js": 115,
-	"./tzm": 116,
-	"./tzm-latn": 117,
-	"./tzm-latn.js": 117,
-	"./tzm.js": 116,
-	"./uk": 118,
-	"./uk.js": 118,
-	"./ur": 119,
-	"./ur.js": 119,
-	"./uz": 120,
-	"./uz-latn": 121,
-	"./uz-latn.js": 121,
-	"./uz.js": 120,
-	"./vi": 122,
-	"./vi.js": 122,
-	"./x-pseudo": 123,
-	"./x-pseudo.js": 123,
-	"./yo": 124,
-	"./yo.js": 124,
-	"./zh-cn": 125,
-	"./zh-cn.js": 125,
-	"./zh-hk": 126,
-	"./zh-hk.js": 126,
-	"./zh-tw": 127,
-	"./zh-tw.js": 127
+	"./canada": 126,
+	"./canada.js": 126,
+	"./croatia": 127,
+	"./croatia.js": 127,
+	"./easter": 128,
+	"./easter.js": 128,
+	"./finland": 129,
+	"./finland.js": 129,
+	"./germany": 130,
+	"./germany.js": 130
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -59883,768 +60774,6 @@ webpackContext.id = 168;
 /* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {//! moment-holiday.js
-//! version : 1.4.2
-//! author : Kodie Grantham
-//! license : MIT
-//! https://github.com/kodie/moment-holiday
-
-(function() {
-  var moment = ( true) ? __webpack_require__(0) : this.moment;
-
-  moment.holidays = {};
-  moment.holidays.active = {};
-  moment.holidays.active_last = {};
-
-  moment.holidays.us = {
-    "New Year's Day": {
-      date: '1/1',
-      keywords: ['new'],
-      keywords_y: ['year'],
-      keywords_n: ['eve']
-    },
-    "Martin Luther King Jr. Day": {
-      date: '1/(1,3)',
-      keywords: ['martin', 'luther', 'king', 'jr[\\s\\.]', 'mlk']
-    },
-    "Valentine's Day": {
-      date: '2/14',
-      keywords_y: ['valentine']
-    },
-    "Washington's Birthday": {
-      date: '2/(1,3)',
-      keywords: ['george', 'washington', 'president']
-    },
-    "Saint Patrick's Day": {
-      date: '3/17',
-      keywords: ['patrick', 'saint', 'st[\\s\\.]', 'paddy', 'patty']
-    },
-    "Good Friday": {
-      date: 'goodfriday',
-      keywords_y: ['good', 'friday']
-    },
-    "Easter Sunday": {
-      date: 'easter',
-      keywords_y: ['easter'],
-      keywords: ['sunday']
-    },
-    "Memorial Day": {
-      date: '5/(1,-1)',
-      keywords_y: ['memorial']
-    },
-    "Mother's Day": {
-      date: '5/(0,2)',
-      keywords: ['mother', 'mom']
-    },
-    "Father's Day": {
-      date: '6/(0,3)',
-      keywords: ['father', 'dad']
-    },
-    "Independence Day": {
-      date: '7/4',
-      keywords: ['independence', '4th', 'fourth', 'july']
-    },
-    "Labor Day": {
-      date: '9/(1,1)',
-      keywords: ['labor', 'labour']
-    },
-    "Columbus Day": {
-      date: '10/(1,2)',
-      keywords: ['columbus', 'christopher']
-    },
-    "Halloween": {
-      date: '10/31',
-      keywords_y: ['halloween']
-    },
-    "Veteran's Day": {
-      date: '11/11',
-      keywords: ['veteran', 'vet']
-    },
-    "Thanksgiving Day": {
-      date: '11/(4,4)',
-      keywords: ['thanksgiving', 'thanks', 'turkey'],
-      keywords_n: ['after']
-    },
-    "Day after Thanksgiving": {
-      date: '11/(5,4)',
-      keywords: ['thanksgiving', 'thanks', 'turkey'],
-      keywords_y: ['after']
-    },
-    "Christmas Eve": {
-      date: '12/24',
-      keywords: ['christmas', 'christ', 'x-?mas'],
-      keywords_y: ['eve']
-    },
-    "Christmas Day": {
-      date: '12/25',
-      keywords: ['christmas', 'christ', 'x-?mas'],
-      keywords_n: ['eve']
-    },
-    "New Year's Eve": {
-      date: '12/31',
-      keywords: ['new'],
-      keywords_y: ['year', 'eve']
-    }
-  };
-
-  var parserExtensions = [];
-
-  var parseHoliday = function(self, date, adjust) {
-    var days = [];
-
-    for (var i = 0; i < parserExtensions.length; i++) {
-      var pe = parserExtensions[i](self, date);
-      if (pe || pe === false) { days = pe; }
-    }
-
-    if (days === false) { return false; }
-
-    if (!moment.isMoment(days) && !days.length && date.charAt(0).match(/[0-9(]/)) {
-      var range = false;
-      var dates = date.split('|');
-
-      if (dates.length > 1) { range = true; }
-      if (dates.length > 2) { dates = [dates[0], dates[1]]; }
-
-      for (var i = 0; i < dates.length; i++) {
-        var m = moment(self);
-        var ds = dates[i].split('/');
-
-        if (ds.length === 1 || (ds.length === 2 && ds[1].charAt(0) !== '(' && ds[1].length === 4)) {
-          var td = dates[i];
-          i = -1;
-          dates = [];
-          for (var ii = 1; ii < 13; ii++) { dates.push(ii + '/' + td); }
-          continue;
-        }
-
-        if (ds.length > 2) { m.year(parseInt(ds[2])); }
-
-        m.month((parseInt(ds[0]) - 1));
-
-        if (ds[1].charAt(0) === '(') {
-          var w = ds[1].slice(1, -1).split(',');
-          var wd = parseInt(w[0]);
-          var dt = parseInt(w[1]);
-          var d = moment(m).startOf('month');
-          var limit = (moment(m).endOf('month').diff(d, 'days') + 1);
-          var wds = [];
-
-          if (w[1] && w[1].charAt(0) === '[') {
-            var forward = true;
-            dt = parseInt(w[1].slice(1, -1));
-
-            if (dt < 0) {
-              forward = false;
-              dt = parseInt(w[1].slice(2, -1));
-            }
-
-            d = moment(m).date(dt);
-
-            for (var wi = 0; wi < 6; wi++) {
-              if (d.day() === wd) { days.push(moment(d)); break; }
-
-              if (forward) {
-                d.add(1, 'day');
-              } else {
-                d.subtract(1, 'day');
-              }
-            }
-
-            continue;
-          }
-
-          for (var ai = 0; ai < limit; ai++) {
-            if (d.day() === wd) { wds.push(moment(d)); }
-            d.add(1, 'day');
-          }
-
-          if (!dt) {
-            days = days.concat(wds);
-            continue;
-          } else if (dt < 0) {
-            m = wds[wds.length + dt];
-          } else {
-            m = wds[dt - 1];
-          }
-
-          days.push(m);
-        } else {
-          days.push(m.date(ds[1]));
-        }
-      }
-
-      if (range && days.length > 1) {
-        var diff = days[1].diff(days[0], 'days');
-
-        if (diff > 1) {
-          var di = moment(days[0]);
-          days = [days[0]];
-
-          for (var i = 0; i < diff; i++) {
-            di.add(1, 'day');
-            days.push(moment(di));
-          }
-        }
-      }
-    }
-
-    days = arrayify(days);
-
-    for (var i = 0; i < days.length; i++) {
-      if (!moment.isMoment(days[i])) { delete(days[i]); continue; }
-
-      if (adjust) {
-        if (days[i].day() === 0) { days[i] = days[i].add(1, 'day'); }
-        if (days[i].day() === 6) { days[i] = days[i].subtract(1, 'day'); }
-      }
-
-      days[i] = days[i].startOf('day');
-    }
-
-    if (!days.length) { return false; }
-    if (days.length === 1) { return days[0]; }
-
-    return days;
-  };
-
-  var keywordMatches = function(str, kw) {
-    var m = [];
-    kw = arrayify(kw);
-
-    for (var i = 0; i < kw.length; i++) {
-      var f = str.match(new RegExp(kw[i], 'gi'));
-      if (f) { m = m.concat(f); }
-    }
-
-    return m;
-  };
-
-  var findHoliday = function(self, holiday, adjust, parse, holidayObj) {
-    var pt = {};
-    var wn = [];
-    var obj = {};
-
-    h = holidayObj || moment.holidays.active;
-
-    if (h.hasOwnProperty(holiday)) {
-      wn.push(holiday);
-    } else if (fk = findKey(holiday, h)) {
-      wn.push(fk);
-    } else {
-      for (var hd in h) {
-        if (!h.hasOwnProperty(hd)) { continue; }
-
-        pt[hd] = 0;
-
-        if (h[hd].keywords_n) {
-          var matchesN = keywordMatches(holiday, h[hd].keywords_n);
-          if (matchesN.length) {
-            pt[hd] = 0;
-            continue;
-          }
-        }
-
-        if (h[hd].keywords_y) {
-          var matchesY = keywordMatches(holiday, h[hd].keywords_y);
-          if (matchesY && matchesY.length === h[hd].keywords_y.length) {
-            pt[hd] += matchesY.length;
-          } else {
-            pt[hd] = 0;
-            continue;
-          }
-        }
-
-        if (h[hd].keywords) {
-          var matches = keywordMatches(holiday, h[hd].keywords);
-          if (matches) {
-            pt[hd] += matches.length;
-          } else {
-            continue;
-          }
-        }
-      }
-
-      //console.log(pt); // Display scores
-
-      for (var w in pt) {
-        if (!pt[w] || !pt.hasOwnProperty(w)) { continue; }
-        if (!wn.length || pt[w] === pt[wn[0]]) { wn.push(w); continue; }
-        if (pt[w] > pt[wn[0]]) { wn = [w]; continue; }
-      }
-    }
-
-    if (!wn.length || wn.length > 1) { return false; }
-
-    if (parse !== false) {
-      var d = parseHoliday(self, h[wn[0]].date, adjust);
-
-      if (d) {
-        obj[wn[0]] = d;
-        return obj;
-      }
-    } else {
-      return wn[0];
-    }
-
-    return false;
-  };
-
-  var findHolidays = function(self, holidays, adjust, parse, holidayObj) {
-    var h = {};
-
-    holidays = arrayify(holidays);
-    if (!holidayObj) { holidayObj = moment.holidays.active; }
-
-    for (var i = 0; i < holidays.length; i++) {
-      var find = findHoliday(self, holidays[i], adjust, parse, holidayObj);
-      if (find) { h[find] = holidayObj[find]; }
-    }
-
-    return h;
-  };
-
-  var getAllHolidays = function(self, adjust) {
-    var h = moment.holidays.active;
-    var d = {};
-
-    for (var hd in h) {
-      if (!h.hasOwnProperty(hd)) { continue; }
-      if (td = parseHoliday(self, h[hd].date, adjust)) { d[hd] = td; }
-    }
-
-    return d;
-  };
-
-  var compileRegions = function(locale, regions) {
-    var h = moment.holidays[locale];
-    var o = {};
-
-    if (h) {
-      for (var i = 0; i < regions.length; i++) {
-        var r = regions[i].toLowerCase();
-        var l = moment.holidays[locale + '/' + r];
-        l = {};
-
-        for (var hd in h) {
-          if (!h.hasOwnProperty(hd)) { continue; }
-
-          var y = h[hd].regions || [];
-          var n = h[hd].regions_n || [];
-
-          if (y.length) { y.join().toLowerCase().split(); }
-          if (n.length) { n.join().toLowerCase().split(); }
-
-          if ((!y.length && !n.length) || (y.length && ~y.indexOf(r)) || (n.length && !~n.indexOf(r))) {
-            l[hd] = h[hd];
-          }
-        }
-
-        if (l) { o = merge(o, l); }
-      }
-    }
-
-    if (!Object.keys(o).length) { return false; }
-
-    return o;
-  };
-
-  var getLocale = function(locale) {
-    regions = locale.split('/');
-    locale = regions[0].toLowerCase();
-    regions.shift();
-
-    if (!moment.holidays[locale]) {
-      try {
-        __webpack_require__(170)("./" + locale);
-      } catch(e) { }
-    }
-
-    if (moment.holidays[locale]) {
-      if (regions.length) { return compileRegions(locale, regions); }
-      return moment.holidays[locale];
-    }
-
-    return false;
-  };
-
-  var holidayLoop = function(self, count, forward, adjust) {
-    if (!count) { count = 1; }
-
-    var h = getAllHolidays(self, adjust);
-    var l = moment(self);
-    var y = self.year();
-    var w = [];
-
-    for (var i = 0; i < count; i++) {
-      var d = moment(l);
-
-      while (true) {
-        var b = false;
-
-        if (forward) {
-          d.add(1, 'day');
-        } else {
-          d.subtract(1, 'day');
-        }
-
-        if (d.year() !== y) {
-          h = getAllHolidays(d, adjust);
-          y = d.year();
-        }
-
-        if (!Object.keys(h).length) { b = true; break; }
-
-        for (var hd in h) {
-          if (!h.hasOwnProperty(hd)) { continue; }
-
-          var b2 = false;
-          var ha = arrayify(h[hd]);
-
-          for (var hi = 0; hi < ha.length; hi++) {
-            if (d.isSame(ha[hi], 'day')) {
-              w.push(ha[hi]);
-              l = moment(d);
-              b2 = true;
-              break;
-            }
-          }
-
-          if (b2) { b = true; break; }
-        }
-
-        if (b) { break; }
-      }
-    }
-
-    if (!w.length) { return false; }
-    if (w.length === 1) { return w[0]; }
-
-    return w;
-  };
-
-  var arrayify = function(arr) {
-    if (arr && arr.constructor !== Array) { return [arr]; }
-    return arr;
-  };
-
-  var findKey = function(find, obj) {
-    if (obj.constructor === Object) { obj = Object.keys(obj); }
-    for (var i = 0; i < obj.length; i++) {
-      if (find.toLowerCase() === obj[i].toLowerCase()) { return obj[i]; }
-    }
-    return false;
-  };
-
-  var merge = function(o1, o2) {
-    return Object.assign({}, o1, o2);
-  };
-
-  moment.fn.holiday = function(holidays, adjust) {
-    var h = moment.holidays.active;
-    var d = {};
-    var single = false;
-
-    if (!holidays) { return getAllHolidays(this, adjust); }
-
-    if (holidays.constructor !== Array) {
-      single = true;
-      holidays = [holidays];
-    }
-
-    for (var i = 0; i < holidays.length; i++) {
-      if (td = findHoliday(this, holidays[i], adjust)) { d = Object.assign({}, d, td); }
-    }
-
-    var dKeys = Object.keys(d);
-
-    if (!dKeys.length) { return false; }
-    if (dKeys.length === 1 && single) { return d[dKeys[0]]; }
-
-    return d;
-  };
-
-  moment.fn.holidays = function(holidays, adjust) {
-    return this.holiday(holidays, adjust);
-  };
-
-  moment.fn.isHoliday = function(holidays, adjust) {
-    var h, returnTitle, hs = [];
-
-    if (holidays) {
-      holidays = arrayify(holidays);
-      h = this.holiday(holidays, adjust);
-      returnTitle = false;
-    } else {
-      h = getAllHolidays(this, adjust);
-      returnTitle = true;
-    }
-
-    if (!h) { return false; }
-
-    for (var hd in h) {
-      if (!h.hasOwnProperty(hd)) { continue; }
-
-      var ha = arrayify(h[hd]);
-
-      for (var hi = 0; hi < ha.length; hi++) {
-        if (this.isSame(ha[hi], 'day')) {
-          if (returnTitle) {
-            hs.push(hd);
-          } else {
-            return true;
-          }
-        }
-      }
-    }
-
-    if (hs.length) {
-      if (hs.length === 1) { return hs[0]; }
-      return hs;
-    }
-
-    return false;
-  };
-
-  moment.fn.previousHoliday = function(count, adjust) {
-    return holidayLoop(this, count, false, adjust);
-  };
-
-  moment.fn.previousHolidays = function(count, adjust) {
-    return this.previousHoliday(count, adjust);
-  };
-
-  moment.fn.nextHoliday = function(count, adjust) {
-    return holidayLoop(this, count, true, adjust);
-  };
-
-  moment.fn.nextHolidays = function(count, adjust) {
-    return this.nextHoliday(count, adjust);
-  };
-
-  moment.fn.holidaysBetween = function(date, adjust) {
-    if (!date) { date = new Date(); }
-    date = moment(date).subtract(1, 'day');
-
-    var h = getAllHolidays(this, adjust);
-    var d = moment(this);
-    var y = d.year();
-    var w = [];
-
-    for (var i = 0; i < date.diff(this, 'days'); i++) {
-      d.add(1, 'day');
-
-      if (d.year() !== y) {
-        h = getAllHolidays(d, adjust);
-        y = d.year();
-      }
-
-      if (!Object.keys(h).length) { break; }
-
-      for (var hd in h) {
-        var b = false;
-        var ha = arrayify(h[hd]);
-
-        for (var hi = 0; hi < ha.length; hi++) {
-          if (d.isSame(ha[hi], 'day')) {
-            w.push(ha[hi]);
-            b = true;
-            break;
-          }
-        }
-
-        if (b) { break; }
-      }
-    }
-
-    if (!w.length) { return false; }
-
-    return w;
-  };
-
-  moment.modifyHolidays = {
-    set: function(holidays, specifics) {
-      var newH = {};
-
-      if (holidays.constructor === Array) {
-        var hs = [];
-
-        for (var i = 0; i < holidays.length; i++) {
-          var d = findHoliday(this, holidays[i], null, false);
-          if (d) { hs.push(d); }
-        }
-
-        if (hs.length) {
-          newH = merge(moment.holidays.active);
-
-          for (var hd in newH) {
-            if (!newH.hasOwnProperty(hd)) { continue; }
-            if (!~hs.indexOf(hd)) { delete(newH[hd]); }
-          }
-        }
-      } else if (typeof holidays === 'string') {
-        var locale = getLocale(holidays);
-
-        if (locale) {
-          if (specifics) {
-            newH = findHolidays(this, specifics, null, false, locale);
-          } else {
-            newH = merge(locale);
-          }
-        }
-      } else {
-        newH = holidays;
-      }
-
-      if (Object.keys(newH).length && !Object.is(moment.holidays.active, newH)) {
-        moment.holidays.active_last = merge(moment.holidays.active);
-        moment.holidays.active = newH;
-      }
-
-      return this;
-    },
-
-    add: function(holidays, specifics) {
-      if (typeof holidays === 'string') {
-        var locale = getLocale(holidays);
-        holidays = {};
-
-        if (locale) {
-          if (specifics) {
-            holidays = findHolidays(this, specifics, null, false, locale);
-          } else {
-            holidays = locale;
-          }
-        }
-      }
-
-      if (Object.keys(holidays).length) {
-        moment.holidays.active_last = merge(moment.holidays.active);
-        moment.holidays.active = merge(moment.holidays.active, holidays);
-      }
-
-      return this;
-    },
-
-    remove: function(holidays) {
-      holidays = arrayify(holidays);
-
-      var find = findHolidays(this, holidays, null, false);
-      var newH = merge(moment.holidays.active);
-
-      if (find) {
-        for (var hd in find) { delete(newH[hd]); }
-      }
-
-      if (!Object.is(moment.holidays.active, newH)) {
-        moment.holidays.active_last = merge(moment.holidays.active);
-        moment.holidays.active = newH;
-      }
-
-      return this;
-    },
-
-    undo: function() {
-      var c = merge(moment.holidays.active);
-      moment.holidays.active = merge(moment.holidays.active_last);
-      moment.holidays.active_last = c;
-      return this;
-    },
-
-    extendParser: function(func) {
-      parserExtensions.push(func);
-      return this;
-    }
-  };
-
-  moment.modifyHolidays.set('US').add('Easter', ['Easter Sunday', 'Good Friday']);
-
-  if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
-}).call(this);
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
-
-/***/ }),
-/* 170 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./canada": 128,
-	"./canada.js": 128,
-	"./croatia": 129,
-	"./croatia.js": 129,
-	"./easter": 130,
-	"./easter.js": 130,
-	"./finland": 131,
-	"./finland.js": 131,
-	"./germany": 132,
-	"./germany.js": 132
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 170;
-
-/***/ }),
-/* 171 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "panel panel-default"
-  }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    attrs: {
-      "id": "calendar"
-    }
-  })])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-e95e8324", module.exports)
-  }
-}
-
-/***/ }),
-/* 172 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {/*
     moment-lunar.js
@@ -60654,89 +60783,22 @@ if (false) {
 
 
 
-
 (function () {
     var moment;
-    moment = ( true) ? __webpack_require__(0) : this.moment;
+    moment =  true ? __webpack_require__(0) : this.moment;
 
-    var lunarMonthday =  [
-        1887, 0x1694, 0x16aa, 0x4ad5,
-        0xab6, 0xc4b7, 0x4ae, 0xa56, 0xb52a, 0x1d2a, 0xd54, 0x75aa, 0x156a,
-        0x1096d, 0x95c, 0x14ae, 0xaa4d, 0x1a4c, 0x1b2a, 0x8d55, 0xad4,
-        0x135a, 0x495d, 0x95c, 0xd49b, 0x149a, 0x1a4a, 0xbaa5, 0x16a8,
-        0x1ad4, 0x52da, 0x12b6, 0xe937, 0x92e, 0x1496, 0xb64b, 0xd4a,
-        0xda8, 0x95b5, 0x56c, 0x12ae, 0x492f, 0x92e, 0xcc96, 0x1a94,
-        0x1d4a, 0xada9, 0xb5a, 0x56c, 0x726e, 0x125c, 0xf92d, 0x192a,
-        0x1a94, 0xdb4a, 0x16aa, 0xad4, 0x955b, 0x4ba, 0x125a, 0x592b,
-        0x152a, 0xf695, 0xd94, 0x16aa, 0xaab5, 0x9b4, 0x14b6, 0x6a57,
-        0xa56, 0x1152a, 0x1d2a, 0xd54, 0xd5aa, 0x156a, 0x96c, 0x94ae,
-        0x14ae, 0xa4c, 0x7d26, 0x1b2a, 0xeb55, 0xad4, 0x12da, 0xa95d,
-        0x95a, 0x149a, 0x9a4d, 0x1a4a, 0x11aa5, 0x16a8, 0x16d4, 0xd2da,
-        0x12b6, 0x936, 0x9497, 0x1496, 0x1564b, 0xd4a, 0xda8, 0xd5b4,
-        0x156c, 0x12ae, 0xa92f, 0x92e, 0xc96, 0x6d4a, 0x1d4a, 0x10d65,
-        0xb58, 0x156c, 0xb26d, 0x125c, 0x192c, 0x9a95, 0x1a94, 0x1b4a,
-        0x4b55, 0xad4, 0xf55b, 0x4ba, 0x125a, 0xb92b, 0x152a, 0x1694,
-        0x96aa, 0x15aa, 0x12ab5, 0x974, 0x14b6, 0xca57, 0xa56, 0x1526,
-        0x8e95, 0xd54, 0x15aa, 0x49b5, 0x96c, 0xd4ae, 0x149c, 0x1a4c,
-        0xbd26, 0x1aa6, 0xb54, 0x6d6a, 0x12da, 0x1695d, 0x95a, 0x149a,
-        0xda4b, 0x1a4a, 0x1aa4, 0xbb54, 0x16b4, 0xada, 0x495b, 0x936,
-        0xf497, 0x1496, 0x154a, 0xb6a5, 0xda4, 0x15b4, 0x6ab6, 0x126e,
-        0x1092f, 0x92e, 0xc96, 0xcd4a, 0x1d4a, 0xd64, 0x956c, 0x155c,
-        0x125c, 0x792e, 0x192c, 0xfa95, 0x1a94, 0x1b4a, 0xab55, 0xad4,
-        0x14da, 0x8a5d, 0xa5a, 0x1152b, 0x152a, 0x1694, 0xd6aa, 0x15aa,
-        0xab4, 0x94ba, 0x14b6, 0xa56, 0x7527, 0xd26, 0xee53, 0xd54, 0x15aa,
-        0xa9b5, 0x96c, 0x14ae, 0x8a4e, 0x1a4c, 0x11d26, 0x1aa4, 0x1b54,
-        0xcd6a, 0xada, 0x95c, 0x949d, 0x149a, 0x1a2a, 0x5b25, 0x1aa4,
-        0xfb52, 0x16b4, 0xaba, 0xa95b, 0x936, 0x1496, 0x9a4b, 0x154a,
-        0x136a5, 0xda4, 0x15ac
-    ];
+    var lunarMonthday = [1887, 0x1694, 0x16aa, 0x4ad5, 0xab6, 0xc4b7, 0x4ae, 0xa56, 0xb52a, 0x1d2a, 0xd54, 0x75aa, 0x156a, 0x1096d, 0x95c, 0x14ae, 0xaa4d, 0x1a4c, 0x1b2a, 0x8d55, 0xad4, 0x135a, 0x495d, 0x95c, 0xd49b, 0x149a, 0x1a4a, 0xbaa5, 0x16a8, 0x1ad4, 0x52da, 0x12b6, 0xe937, 0x92e, 0x1496, 0xb64b, 0xd4a, 0xda8, 0x95b5, 0x56c, 0x12ae, 0x492f, 0x92e, 0xcc96, 0x1a94, 0x1d4a, 0xada9, 0xb5a, 0x56c, 0x726e, 0x125c, 0xf92d, 0x192a, 0x1a94, 0xdb4a, 0x16aa, 0xad4, 0x955b, 0x4ba, 0x125a, 0x592b, 0x152a, 0xf695, 0xd94, 0x16aa, 0xaab5, 0x9b4, 0x14b6, 0x6a57, 0xa56, 0x1152a, 0x1d2a, 0xd54, 0xd5aa, 0x156a, 0x96c, 0x94ae, 0x14ae, 0xa4c, 0x7d26, 0x1b2a, 0xeb55, 0xad4, 0x12da, 0xa95d, 0x95a, 0x149a, 0x9a4d, 0x1a4a, 0x11aa5, 0x16a8, 0x16d4, 0xd2da, 0x12b6, 0x936, 0x9497, 0x1496, 0x1564b, 0xd4a, 0xda8, 0xd5b4, 0x156c, 0x12ae, 0xa92f, 0x92e, 0xc96, 0x6d4a, 0x1d4a, 0x10d65, 0xb58, 0x156c, 0xb26d, 0x125c, 0x192c, 0x9a95, 0x1a94, 0x1b4a, 0x4b55, 0xad4, 0xf55b, 0x4ba, 0x125a, 0xb92b, 0x152a, 0x1694, 0x96aa, 0x15aa, 0x12ab5, 0x974, 0x14b6, 0xca57, 0xa56, 0x1526, 0x8e95, 0xd54, 0x15aa, 0x49b5, 0x96c, 0xd4ae, 0x149c, 0x1a4c, 0xbd26, 0x1aa6, 0xb54, 0x6d6a, 0x12da, 0x1695d, 0x95a, 0x149a, 0xda4b, 0x1a4a, 0x1aa4, 0xbb54, 0x16b4, 0xada, 0x495b, 0x936, 0xf497, 0x1496, 0x154a, 0xb6a5, 0xda4, 0x15b4, 0x6ab6, 0x126e, 0x1092f, 0x92e, 0xc96, 0xcd4a, 0x1d4a, 0xd64, 0x956c, 0x155c, 0x125c, 0x792e, 0x192c, 0xfa95, 0x1a94, 0x1b4a, 0xab55, 0xad4, 0x14da, 0x8a5d, 0xa5a, 0x1152b, 0x152a, 0x1694, 0xd6aa, 0x15aa, 0xab4, 0x94ba, 0x14b6, 0xa56, 0x7527, 0xd26, 0xee53, 0xd54, 0x15aa, 0xa9b5, 0x96c, 0x14ae, 0x8a4e, 0x1a4c, 0x11d26, 0x1aa4, 0x1b54, 0xcd6a, 0xada, 0x95c, 0x949d, 0x149a, 0x1a2a, 0x5b25, 0x1aa4, 0xfb52, 0x16b4, 0xaba, 0xa95b, 0x936, 0x1496, 0x9a4b, 0x154a, 0x136a5, 0xda4, 0x15ac];
 
-    var solarYear = [
-        1887, 0xec04c, 0xec23f, 0xec435, 0xec649,
-        0xec83e, 0xeca51, 0xecc46, 0xece3a, 0xed04d, 0xed242, 0xed436,
-        0xed64a, 0xed83f, 0xeda53, 0xedc48, 0xede3d, 0xee050, 0xee244,
-        0xee439, 0xee64d, 0xee842, 0xeea36, 0xeec4a, 0xeee3e, 0xef052,
-        0xef246, 0xef43a, 0xef64e, 0xef843, 0xefa37, 0xefc4b, 0xefe41,
-        0xf0054, 0xf0248, 0xf043c, 0xf0650, 0xf0845, 0xf0a38, 0xf0c4d,
-        0xf0e42, 0xf1037, 0xf124a, 0xf143e, 0xf1651, 0xf1846, 0xf1a3a,
-        0xf1c4e, 0xf1e44, 0xf2038, 0xf224b, 0xf243f, 0xf2653, 0xf2848,
-        0xf2a3b, 0xf2c4f, 0xf2e45, 0xf3039, 0xf324d, 0xf3442, 0xf3636,
-        0xf384a, 0xf3a3d, 0xf3c51, 0xf3e46, 0xf403b, 0xf424e, 0xf4443,
-        0xf4638, 0xf484c, 0xf4a3f, 0xf4c52, 0xf4e48, 0xf503c, 0xf524f,
-        0xf5445, 0xf5639, 0xf584d, 0xf5a42, 0xf5c35, 0xf5e49, 0xf603e,
-        0xf6251, 0xf6446, 0xf663b, 0xf684f, 0xf6a43, 0xf6c37, 0xf6e4b,
-        0xf703f, 0xf7252, 0xf7447, 0xf763c, 0xf7850, 0xf7a45, 0xf7c39,
-        0xf7e4d, 0xf8042, 0xf8254, 0xf8449, 0xf863d, 0xf8851, 0xf8a46,
-        0xf8c3b, 0xf8e4f, 0xf9044, 0xf9237, 0xf944a, 0xf963f, 0xf9853,
-        0xf9a47, 0xf9c3c, 0xf9e50, 0xfa045, 0xfa238, 0xfa44c, 0xfa641,
-        0xfa836, 0xfaa49, 0xfac3d, 0xfae52, 0xfb047, 0xfb23a, 0xfb44e,
-        0xfb643, 0xfb837, 0xfba4a, 0xfbc3f, 0xfbe53, 0xfc048, 0xfc23c,
-        0xfc450, 0xfc645, 0xfc839, 0xfca4c, 0xfcc41, 0xfce36, 0xfd04a,
-        0xfd23d, 0xfd451, 0xfd646, 0xfd83a, 0xfda4d, 0xfdc43, 0xfde37,
-        0xfe04b, 0xfe23f, 0xfe453, 0xfe648, 0xfe83c, 0xfea4f, 0xfec44,
-        0xfee38, 0xff04c, 0xff241, 0xff436, 0xff64a, 0xff83e, 0xffa51,
-        0xffc46, 0xffe3a, 0x10004e, 0x100242, 0x100437, 0x10064b, 0x100841,
-        0x100a53, 0x100c48, 0x100e3c, 0x10104f, 0x101244, 0x101438,
-        0x10164c, 0x101842, 0x101a35, 0x101c49, 0x101e3d, 0x102051,
-        0x102245, 0x10243a, 0x10264e, 0x102843, 0x102a37, 0x102c4b,
-        0x102e3f, 0x103053, 0x103247, 0x10343b, 0x10364f, 0x103845,
-        0x103a38, 0x103c4c, 0x103e42, 0x104036, 0x104249, 0x10443d,
-        0x104651, 0x104846, 0x104a3a, 0x104c4e, 0x104e43, 0x105038,
-        0x10524a, 0x10543e, 0x105652, 0x105847, 0x105a3b, 0x105c4f,
-        0x105e45, 0x106039, 0x10624c, 0x106441, 0x106635, 0x106849,
-        0x106a3d, 0x106c51, 0x106e47, 0x10703c, 0x10724f, 0x107444,
-        0x107638, 0x10784c, 0x107a3f, 0x107c53, 0x107e48
-    ];
+    var solarYear = [1887, 0xec04c, 0xec23f, 0xec435, 0xec649, 0xec83e, 0xeca51, 0xecc46, 0xece3a, 0xed04d, 0xed242, 0xed436, 0xed64a, 0xed83f, 0xeda53, 0xedc48, 0xede3d, 0xee050, 0xee244, 0xee439, 0xee64d, 0xee842, 0xeea36, 0xeec4a, 0xeee3e, 0xef052, 0xef246, 0xef43a, 0xef64e, 0xef843, 0xefa37, 0xefc4b, 0xefe41, 0xf0054, 0xf0248, 0xf043c, 0xf0650, 0xf0845, 0xf0a38, 0xf0c4d, 0xf0e42, 0xf1037, 0xf124a, 0xf143e, 0xf1651, 0xf1846, 0xf1a3a, 0xf1c4e, 0xf1e44, 0xf2038, 0xf224b, 0xf243f, 0xf2653, 0xf2848, 0xf2a3b, 0xf2c4f, 0xf2e45, 0xf3039, 0xf324d, 0xf3442, 0xf3636, 0xf384a, 0xf3a3d, 0xf3c51, 0xf3e46, 0xf403b, 0xf424e, 0xf4443, 0xf4638, 0xf484c, 0xf4a3f, 0xf4c52, 0xf4e48, 0xf503c, 0xf524f, 0xf5445, 0xf5639, 0xf584d, 0xf5a42, 0xf5c35, 0xf5e49, 0xf603e, 0xf6251, 0xf6446, 0xf663b, 0xf684f, 0xf6a43, 0xf6c37, 0xf6e4b, 0xf703f, 0xf7252, 0xf7447, 0xf763c, 0xf7850, 0xf7a45, 0xf7c39, 0xf7e4d, 0xf8042, 0xf8254, 0xf8449, 0xf863d, 0xf8851, 0xf8a46, 0xf8c3b, 0xf8e4f, 0xf9044, 0xf9237, 0xf944a, 0xf963f, 0xf9853, 0xf9a47, 0xf9c3c, 0xf9e50, 0xfa045, 0xfa238, 0xfa44c, 0xfa641, 0xfa836, 0xfaa49, 0xfac3d, 0xfae52, 0xfb047, 0xfb23a, 0xfb44e, 0xfb643, 0xfb837, 0xfba4a, 0xfbc3f, 0xfbe53, 0xfc048, 0xfc23c, 0xfc450, 0xfc645, 0xfc839, 0xfca4c, 0xfcc41, 0xfce36, 0xfd04a, 0xfd23d, 0xfd451, 0xfd646, 0xfd83a, 0xfda4d, 0xfdc43, 0xfde37, 0xfe04b, 0xfe23f, 0xfe453, 0xfe648, 0xfe83c, 0xfea4f, 0xfec44, 0xfee38, 0xff04c, 0xff241, 0xff436, 0xff64a, 0xff83e, 0xffa51, 0xffc46, 0xffe3a, 0x10004e, 0x100242, 0x100437, 0x10064b, 0x100841, 0x100a53, 0x100c48, 0x100e3c, 0x10104f, 0x101244, 0x101438, 0x10164c, 0x101842, 0x101a35, 0x101c49, 0x101e3d, 0x102051, 0x102245, 0x10243a, 0x10264e, 0x102843, 0x102a37, 0x102c4b, 0x102e3f, 0x103053, 0x103247, 0x10343b, 0x10364f, 0x103845, 0x103a38, 0x103c4c, 0x103e42, 0x104036, 0x104249, 0x10443d, 0x104651, 0x104846, 0x104a3a, 0x104c4e, 0x104e43, 0x105038, 0x10524a, 0x10543e, 0x105652, 0x105847, 0x105a3b, 0x105c4f, 0x105e45, 0x106039, 0x10624c, 0x106441, 0x106635, 0x106849, 0x106a3d, 0x106c51, 0x106e47, 0x10703c, 0x10724f, 0x107444, 0x107638, 0x10784c, 0x107a3f, 0x107c53, 0x107e48];
 
-    var getBitInt = function (data, length, shift) {
-        return (data & (((1 << length) - 1) << shift)) >> shift;
+    var getBitInt = function getBitInt(data, length, shift) {
+        return (data & (1 << length) - 1 << shift) >> shift;
     };
 
-    var solarToInt = function (y, m, d) {
+    var solarToInt = function solarToInt(y, m, d) {
         m = (m + 9) % 12;
         y = parseInt(y) - parseInt(m / 10);
-        return 365 * y + parseInt(y / 4) - parseInt(y / 100) + parseInt(y / 400) + parseInt((m * 306 + 5) / 10)
-            + (d - 1);
+        return 365 * y + parseInt(y / 4) - parseInt(y / 100) + parseInt(y / 400) + parseInt((m * 306 + 5) / 10) + (d - 1);
     };
 
     moment.fn.solar = function (isLeanMonth) {
@@ -60783,8 +60845,7 @@ if (false) {
 
     moment.fn.lunar = function () {
         var index = this.year() - solarYear[0];
-        var data = (this.year() << 9) | ((this.month() + 1) << 5)
-            | (this.date());
+        var data = this.year() << 9 | this.month() + 1 << 5 | this.date();
         if (solarYear[index] > data) {
             index--;
         }
@@ -60792,8 +60853,7 @@ if (false) {
         var y = getBitInt(solar11, 12, 9);
         var m = getBitInt(solar11, 4, 5);
         var d = getBitInt(solar11, 5, 0);
-        var offset = solarToInt(this.year(), this.month() + 1,
-                this.date()) - solarToInt(y, m, d);
+        var offset = solarToInt(this.year(), this.month() + 1, this.date()) - solarToInt(y, m, d);
 
         var days = lunarMonthday[index];
         var leap = getBitInt(days, 4, 13);
@@ -60815,19 +60875,1172 @@ if (false) {
         if (leap != 0 && lunarM + 1 > leap) {
             lunarM--;
             if (lunarM + 1 == leap) {
-                this.isLeanMonth = function() {return true};
+                this.isLeanMonth = function () {
+                    return true;
+                };
             }
         }
 
         return this.year(lunarY).month(lunarM).date(lunarD);
+    };
+
+    moment.fn.isLeanMonth = function () {
+        return false;
+    };
+
+    if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) {
+        module.exports = moment;
     }
-
-    moment.fn.isLeanMonth = function() {return false;}
-
-    if ((typeof module !== 'undefined' && module !== null ? module.exports : void 0) != null) { module.exports = moment; }
-}).call(this)
-
+}).call(this);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
+
+/***/ }),
+/* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
+    attrs: {
+      "id": "calendar"
+    }
+  })])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-e95e8324", module.exports)
+  }
+}
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */
+/***/ (function(module, exports) {
+
+/* =========================================================
+ * Bootstrap year calendar v1.1.0
+ * Repo: https://github.com/Paul-DS/bootstrap-year-calendar
+ * =========================================================
+ * Created by Paul David-Sivelle
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================= */
+
+(function ($) {
+	var Calendar = function Calendar(element, options) {
+		this.element = element;
+		this.element.addClass('calendar');
+
+		this._initializeEvents(options);
+		this._initializeOptions(options);
+		this.setYear(this.options.startYear);
+	};
+
+	Calendar.prototype = {
+		constructor: Calendar,
+		_initializeOptions: function _initializeOptions(opt) {
+			if (opt == null) {
+				opt = [];
+			}
+
+			this.options = {
+				startYear: !isNaN(parseInt(opt.startYear)) ? parseInt(opt.startYear) : new Date().getFullYear(),
+				minDate: opt.minDate instanceof Date ? opt.minDate : null,
+				maxDate: opt.maxDate instanceof Date ? opt.maxDate : null,
+				language: opt.language != null && dates[opt.language] != null ? opt.language : 'en',
+				allowOverlap: opt.allowOverlap != null ? opt.allowOverlap : true,
+				displayWeekNumber: opt.displayWeekNumber != null ? opt.displayWeekNumber : false,
+				displayDisabledDataSource: opt.displayDisabledDataSource != null ? opt.displayDisabledDataSource : false,
+				displayHeader: opt.displayHeader != null ? opt.displayHeader : true,
+				alwaysHalfDay: opt.alwaysHalfDay != null ? opt.alwaysHalfDay : false,
+				enableRangeSelection: opt.enableRangeSelection != null ? opt.enableRangeSelection : false,
+				disabledDays: opt.disabledDays instanceof Array ? opt.disabledDays : [],
+				disabledWeekDays: opt.disabledWeekDays instanceof Array ? opt.disabledWeekDays : [],
+				hiddenWeekDays: opt.hiddenWeekDays instanceof Array ? opt.hiddenWeekDays : [],
+				roundRangeLimits: opt.roundRangeLimits != null ? opt.roundRangeLimits : false,
+				dataSource: opt.dataSource instanceof Array ? opt.dataSource : [],
+				style: opt.style == 'background' || opt.style == 'border' || opt.style == 'custom' ? opt.style : 'border',
+				enableContextMenu: opt.enableContextMenu != null ? opt.enableContextMenu : false,
+				contextMenuItems: opt.contextMenuItems instanceof Array ? opt.contextMenuItems : [],
+				customDayRenderer: $.isFunction(opt.customDayRenderer) ? opt.customDayRenderer : null,
+				customDataSourceRenderer: $.isFunction(opt.customDataSourceRenderer) ? opt.customDataSourceRenderer : null,
+				weekStart: !isNaN(parseInt(opt.weekStart)) ? parseInt(opt.weekStart) : null
+			};
+
+			this._initializeDatasourceColors();
+		},
+		_initializeEvents: function _initializeEvents(opt) {
+			if (opt == null) {
+				opt = [];
+			}
+
+			if (opt.yearChanged) {
+				this.element.bind('yearChanged', opt.yearChanged);
+			}
+			if (opt.renderEnd) {
+				this.element.bind('renderEnd', opt.renderEnd);
+			}
+			if (opt.clickDay) {
+				this.element.bind('clickDay', opt.clickDay);
+			}
+			if (opt.dayContextMenu) {
+				this.element.bind('dayContextMenu', opt.dayContextMenu);
+			}
+			if (opt.selectRange) {
+				this.element.bind('selectRange', opt.selectRange);
+			}
+			if (opt.mouseOnDay) {
+				this.element.bind('mouseOnDay', opt.mouseOnDay);
+			}
+			if (opt.mouseOutDay) {
+				this.element.bind('mouseOutDay', opt.mouseOutDay);
+			}
+		},
+		_initializeDatasourceColors: function _initializeDatasourceColors() {
+			for (var i = 0; i < this.options.dataSource.length; i++) {
+				if (this.options.dataSource[i].color == null) {
+					this.options.dataSource[i].color = colors[i % colors.length];
+				}
+			}
+		},
+		render: function render() {
+			this.element.empty();
+
+			if (this.options.displayHeader) {
+				this._renderHeader();
+			}
+
+			this._renderBody();
+			this._renderDataSource();
+
+			this._applyEvents();
+			this.element.find('.months-container').fadeIn(500);
+
+			this._triggerEvent('renderEnd', { currentYear: this.options.startYear });
+		},
+		_renderHeader: function _renderHeader() {
+			var header = $(document.createElement('div'));
+			header.addClass('calendar-header panel panel-default');
+
+			var headerTable = $(document.createElement('table'));
+
+			var prevDiv = $(document.createElement('th'));
+			prevDiv.addClass('prev');
+
+			if (this.options.minDate != null && this.options.minDate > new Date(this.options.startYear - 1, 11, 31)) {
+				prevDiv.addClass('disabled');
+			}
+
+			var prevIcon = $(document.createElement('span'));
+			prevIcon.addClass('glyphicon glyphicon-chevron-left');
+
+			prevDiv.append(prevIcon);
+
+			headerTable.append(prevDiv);
+
+			var prev2YearDiv = $(document.createElement('th'));
+			prev2YearDiv.addClass('year-title year-neighbor2 hidden-sm hidden-xs');
+			prev2YearDiv.text(this.options.startYear - 2);
+
+			if (this.options.minDate != null && this.options.minDate > new Date(this.options.startYear - 2, 11, 31)) {
+				prev2YearDiv.addClass('disabled');
+			}
+
+			headerTable.append(prev2YearDiv);
+
+			var prevYearDiv = $(document.createElement('th'));
+			prevYearDiv.addClass('year-title year-neighbor hidden-xs');
+			prevYearDiv.text(this.options.startYear - 1);
+
+			if (this.options.minDate != null && this.options.minDate > new Date(this.options.startYear - 1, 11, 31)) {
+				prevYearDiv.addClass('disabled');
+			}
+
+			headerTable.append(prevYearDiv);
+
+			var yearDiv = $(document.createElement('th'));
+			yearDiv.addClass('year-title');
+			yearDiv.text(this.options.startYear);
+
+			headerTable.append(yearDiv);
+
+			var nextYearDiv = $(document.createElement('th'));
+			nextYearDiv.addClass('year-title year-neighbor hidden-xs');
+			nextYearDiv.text(this.options.startYear + 1);
+
+			if (this.options.maxDate != null && this.options.maxDate < new Date(this.options.startYear + 1, 0, 1)) {
+				nextYearDiv.addClass('disabled');
+			}
+
+			headerTable.append(nextYearDiv);
+
+			var next2YearDiv = $(document.createElement('th'));
+			next2YearDiv.addClass('year-title year-neighbor2 hidden-sm hidden-xs');
+			next2YearDiv.text(this.options.startYear + 2);
+
+			if (this.options.maxDate != null && this.options.maxDate < new Date(this.options.startYear + 2, 0, 1)) {
+				next2YearDiv.addClass('disabled');
+			}
+
+			headerTable.append(next2YearDiv);
+
+			var nextDiv = $(document.createElement('th'));
+			nextDiv.addClass('next');
+
+			if (this.options.maxDate != null && this.options.maxDate < new Date(this.options.startYear + 1, 0, 1)) {
+				nextDiv.addClass('disabled');
+			}
+
+			var nextIcon = $(document.createElement('span'));
+			nextIcon.addClass('glyphicon glyphicon-chevron-right');
+
+			nextDiv.append(nextIcon);
+
+			headerTable.append(nextDiv);
+
+			header.append(headerTable);
+
+			this.element.append(header);
+		},
+		_renderBody: function _renderBody() {
+			var monthsDiv = $(document.createElement('div'));
+			monthsDiv.addClass('months-container');
+
+			for (var m = 0; m < 12; m++) {
+				/* Container */
+				var monthDiv = $(document.createElement('div'));
+				monthDiv.addClass('month-container');
+				monthDiv.data('month-id', m);
+
+				var firstDate = new Date(this.options.startYear, m, 1);
+
+				var table = $(document.createElement('table'));
+				table.addClass('month');
+
+				/* Month header */
+				var thead = $(document.createElement('thead'));
+
+				var titleRow = $(document.createElement('tr'));
+
+				var titleCell = $(document.createElement('th'));
+				titleCell.addClass('month-title');
+				titleCell.attr('colspan', this.options.displayWeekNumber ? 8 : 7);
+				titleCell.text(dates[this.options.language].months[m]);
+
+				titleRow.append(titleCell);
+				thead.append(titleRow);
+
+				var headerRow = $(document.createElement('tr'));
+
+				if (this.options.displayWeekNumber) {
+					var weekNumberCell = $(document.createElement('th'));
+					weekNumberCell.addClass('week-number');
+					weekNumberCell.text(dates[this.options.language].weekShort);
+					headerRow.append(weekNumberCell);
+				}
+
+				var weekStart = this.options.weekStart ? this.options.weekStart : dates[this.options.language].weekStart;
+				var d = weekStart;
+				do {
+					var headerCell = $(document.createElement('th'));
+					headerCell.addClass('day-header');
+					headerCell.text(dates[this.options.language].daysMin[d]);
+
+					if (this._isHidden(d)) {
+						headerCell.addClass('hidden');
+					}
+
+					headerRow.append(headerCell);
+
+					d++;
+					if (d >= 7) d = 0;
+				} while (d != weekStart);
+
+				thead.append(headerRow);
+				table.append(thead);
+
+				/* Days */
+				var currentDate = new Date(firstDate.getTime());
+				var lastDate = new Date(this.options.startYear, m + 1, 0);
+
+				while (currentDate.getDay() != weekStart) {
+					currentDate.setDate(currentDate.getDate() - 1);
+				}
+
+				while (currentDate <= lastDate) {
+					var row = $(document.createElement('tr'));
+
+					if (this.options.displayWeekNumber) {
+						var weekNumberCell = $(document.createElement('td'));
+						weekNumberCell.addClass('week-number');
+						weekNumberCell.text(this.getWeekNumber(currentDate));
+						row.append(weekNumberCell);
+					}
+
+					do {
+						var cell = $(document.createElement('td'));
+						cell.addClass('day');
+
+						if (this._isHidden(currentDate.getDay())) {
+							cell.addClass('hidden');
+						}
+
+						if (currentDate < firstDate) {
+							cell.addClass('old');
+						} else if (currentDate > lastDate) {
+							cell.addClass('new');
+						} else {
+							if (this._isDisabled(currentDate)) {
+								cell.addClass('disabled');
+							}
+
+							var cellContent = $(document.createElement('div'));
+							cellContent.addClass('day-content');
+							cellContent.text(currentDate.getDate());
+							cell.append(cellContent);
+
+							if (this.options.customDayRenderer) {
+								this.options.customDayRenderer(cellContent, currentDate);
+							}
+						}
+
+						row.append(cell);
+
+						currentDate.setDate(currentDate.getDate() + 1);
+					} while (currentDate.getDay() != weekStart);
+
+					table.append(row);
+				}
+
+				monthDiv.append(table);
+
+				monthsDiv.append(monthDiv);
+			}
+
+			this.element.append(monthsDiv);
+		},
+		_renderDataSource: function _renderDataSource() {
+			var _this = this;
+			if (this.options.dataSource != null && this.options.dataSource.length > 0) {
+				this.element.find('.month-container').each(function () {
+					var month = $(this).data('month-id');
+
+					var firstDate = new Date(_this.options.startYear, month, 1);
+					var lastDate = new Date(_this.options.startYear, month + 1, 1);
+
+					if ((_this.options.minDate == null || lastDate > _this.options.minDate) && (_this.options.maxDate == null || firstDate <= _this.options.maxDate)) {
+						var monthData = [];
+
+						for (var i = 0; i < _this.options.dataSource.length; i++) {
+							if (!(_this.options.dataSource[i].startDate >= lastDate) || _this.options.dataSource[i].endDate < firstDate) {
+								monthData.push(_this.options.dataSource[i]);
+							}
+						}
+
+						if (monthData.length > 0) {
+							$(this).find('.day-content').each(function () {
+								var currentDate = new Date(_this.options.startYear, month, $(this).text());
+								var nextDate = new Date(_this.options.startYear, month, currentDate.getDate() + 1);
+
+								var dayData = [];
+
+								if ((_this.options.minDate == null || currentDate >= _this.options.minDate) && (_this.options.maxDate == null || currentDate <= _this.options.maxDate)) {
+									for (var i = 0; i < monthData.length; i++) {
+										if (monthData[i].startDate < nextDate && monthData[i].endDate >= currentDate) {
+											dayData.push(monthData[i]);
+										}
+									}
+
+									if (dayData.length > 0 && (_this.options.displayDisabledDataSource || !_this._isDisabled(currentDate))) {
+										_this._renderDataSourceDay($(this), currentDate, dayData);
+									}
+								}
+							});
+						}
+					}
+				});
+			}
+		},
+		_renderDataSourceDay: function _renderDataSourceDay(elt, currentDate, events) {
+			switch (this.options.style) {
+				case 'border':
+					var weight = 0;
+
+					if (events.length == 1) {
+						weight = 4;
+					} else if (events.length <= 3) {
+						weight = 2;
+					} else {
+						elt.parent().css('box-shadow', 'inset 0 -4px 0 0 black');
+					}
+
+					if (weight > 0) {
+						var boxShadow = '';
+
+						for (var i = 0; i < events.length; i++) {
+							if (boxShadow != '') {
+								boxShadow += ",";
+							}
+
+							boxShadow += 'inset 0 -' + (parseInt(i) + 1) * weight + 'px 0 0 ' + events[i].color;
+						}
+
+						elt.parent().css('box-shadow', boxShadow);
+					}
+					break;
+
+				case 'background':
+					elt.parent().css('background-color', events[events.length - 1].color);
+
+					var currentTime = currentDate.getTime();
+
+					if (events[events.length - 1].startDate.getTime() == currentTime) {
+						elt.parent().addClass('day-start');
+
+						if (events[events.length - 1].startHalfDay || this.options.alwaysHalfDay) {
+							elt.parent().addClass('day-half');
+
+							// Find color for other half
+							var otherColor = 'transparent';
+							for (var i = events.length - 2; i >= 0; i--) {
+								if (events[i].startDate.getTime() != currentTime || !events[i].startHalfDay && !this.options.alwaysHalfDay) {
+									otherColor = events[i].color;
+									break;
+								}
+							}
+
+							elt.parent().css('background', 'linear-gradient(-45deg, ' + events[events.length - 1].color + ', ' + events[events.length - 1].color + ' 49%, ' + otherColor + ' 51%, ' + otherColor + ')');
+						} else if (this.options.roundRangeLimits) {
+							elt.parent().addClass('round-left');
+						}
+					} else if (events[events.length - 1].endDate.getTime() == currentTime) {
+						elt.parent().addClass('day-end');
+
+						if (events[events.length - 1].endHalfDay || this.options.alwaysHalfDay) {
+							elt.parent().addClass('day-half');
+
+							// Find color for other half
+							var otherColor = 'transparent';
+							for (var i = events.length - 2; i >= 0; i--) {
+								if (events[i].endDate.getTime() != currentTime || !events[i].endHalfDay && !this.options.alwaysHalfDay) {
+									otherColor = events[i].color;
+									break;
+								}
+							}
+
+							elt.parent().css('background', 'linear-gradient(135deg, ' + events[events.length - 1].color + ', ' + events[events.length - 1].color + ' 49%, ' + otherColor + ' 51%, ' + otherColor + ')');
+						} else if (this.options.roundRangeLimits) {
+							elt.parent().addClass('round-right');
+						}
+					}
+					break;
+
+				case 'custom':
+					if (this.options.customDataSourceRenderer) {
+						this.options.customDataSourceRenderer.call(this, elt, currentDate, events);
+					}
+					break;
+			}
+		},
+		_applyEvents: function _applyEvents() {
+			var _this = this;
+
+			/* Header buttons */
+			this.element.find('.year-neighbor, .year-neighbor2').click(function () {
+				if (!$(this).hasClass('disabled')) {
+					_this.setYear(parseInt($(this).text()));
+				}
+			});
+
+			this.element.find('.calendar-header .prev').click(function () {
+				if (!$(this).hasClass('disabled')) {
+					_this.element.find('.months-container').animate({ 'margin-left': '100%' }, 100, function () {
+						_this.element.find('.months-container').css('visibility', 'hidden');
+						_this.element.find('.months-container').css('margin-left', '0');
+
+						setTimeout(function () {
+							_this.setYear(_this.options.startYear - 1);
+						}, 50);
+					});
+				}
+			});
+
+			this.element.find('.calendar-header .next').click(function () {
+				if (!$(this).hasClass('disabled')) {
+					_this.element.find('.months-container').animate({ 'margin-left': '-100%' }, 100, function () {
+						_this.element.find('.months-container').css('visibility', 'hidden');
+						_this.element.find('.months-container').css('margin-left', '0');
+
+						setTimeout(function () {
+							_this.setYear(_this.options.startYear + 1);
+						}, 50);
+					});
+				}
+			});
+
+			var cells = this.element.find('.day:not(.old, .new, .disabled)');
+
+			/* Click on date */
+			cells.click(function (e) {
+				e.stopPropagation();
+				var date = _this._getDate($(this));
+				_this._triggerEvent('clickDay', {
+					element: $(this),
+					which: e.which,
+					date: date,
+					events: _this.getEvents(date)
+				});
+			});
+
+			/* Click right on date */
+
+			cells.bind('contextmenu', function (e) {
+				if (_this.options.enableContextMenu) {
+					e.preventDefault();
+					if (_this.options.contextMenuItems.length > 0) {
+						_this._openContextMenu($(this));
+					}
+				}
+
+				var date = _this._getDate($(this));
+				_this._triggerEvent('dayContextMenu', {
+					element: $(this),
+					date: date,
+					events: _this.getEvents(date)
+				});
+			});
+
+			/* Range selection */
+			if (this.options.enableRangeSelection) {
+				cells.mousedown(function (e) {
+					if (e.which == 1) {
+						var currentDate = _this._getDate($(this));
+
+						if (_this.options.allowOverlap || _this.getEvents(currentDate).length == 0) {
+							_this._mouseDown = true;
+							_this._rangeStart = _this._rangeEnd = currentDate;
+							_this._refreshRange();
+						}
+					}
+				});
+
+				cells.mouseenter(function (e) {
+					if (_this._mouseDown) {
+						var currentDate = _this._getDate($(this));
+
+						if (!_this.options.allowOverlap) {
+							var newDate = new Date(_this._rangeStart.getTime());
+
+							if (newDate < currentDate) {
+								var nextDate = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() + 1);
+								while (newDate < currentDate) {
+									if (_this.getEvents(nextDate).length > 0) {
+										break;
+									}
+
+									newDate.setDate(newDate.getDate() + 1);
+									nextDate.setDate(nextDate.getDate() + 1);
+								}
+							} else {
+								var nextDate = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 1);
+								while (newDate > currentDate) {
+									if (_this.getEvents(nextDate).length > 0) {
+										break;
+									}
+
+									newDate.setDate(newDate.getDate() - 1);
+									nextDate.setDate(nextDate.getDate() - 1);
+								}
+							}
+
+							currentDate = newDate;
+						}
+
+						var oldValue = _this._rangeEnd;
+						_this._rangeEnd = currentDate;
+
+						if (oldValue.getTime() != _this._rangeEnd.getTime()) {
+							_this._refreshRange();
+						}
+					}
+				});
+
+				$(window).mouseup(function (e) {
+					if (_this._mouseDown) {
+						_this._mouseDown = false;
+						_this._refreshRange();
+
+						var minDate = _this._rangeStart < _this._rangeEnd ? _this._rangeStart : _this._rangeEnd;
+						var maxDate = _this._rangeEnd > _this._rangeStart ? _this._rangeEnd : _this._rangeStart;
+
+						_this._triggerEvent('selectRange', {
+							startDate: minDate,
+							endDate: maxDate,
+							events: _this.getEventsOnRange(minDate, new Date(maxDate.getFullYear(), maxDate.getMonth(), maxDate.getDate() + 1))
+						});
+					}
+				});
+			}
+
+			/* Hover date */
+			cells.mouseenter(function (e) {
+				if (!_this._mouseDown) {
+					var date = _this._getDate($(this));
+					_this._triggerEvent('mouseOnDay', {
+						element: $(this),
+						date: date,
+						events: _this.getEvents(date)
+					});
+				}
+			});
+
+			cells.mouseleave(function (e) {
+				var date = _this._getDate($(this));
+				_this._triggerEvent('mouseOutDay', {
+					element: $(this),
+					date: date,
+					events: _this.getEvents(date)
+				});
+			});
+
+			/* Responsive management */
+
+			setInterval(function () {
+				var calendarSize = $(_this.element).width();
+				var monthSize = $(_this.element).find('.month').first().width() + 10;
+				var monthContainerClass = 'month-container';
+
+				if (monthSize * 6 < calendarSize) {
+					monthContainerClass += ' col-xs-2';
+				} else if (monthSize * 4 < calendarSize) {
+					monthContainerClass += ' col-xs-3';
+				} else if (monthSize * 3 < calendarSize) {
+					monthContainerClass += ' col-xs-4';
+				} else if (monthSize * 2 < calendarSize) {
+					monthContainerClass += ' col-xs-6';
+				} else {
+					monthContainerClass += ' col-xs-12';
+				}
+
+				$(_this.element).find('.month-container').attr('class', monthContainerClass);
+			}, 300);
+		},
+		_refreshRange: function _refreshRange() {
+			var _this = this;
+
+			this.element.find('td.day.range').removeClass('range');
+			this.element.find('td.day.range-start').removeClass('range-start');
+			this.element.find('td.day.range-end').removeClass('range-end');
+
+			if (this._mouseDown) {
+				var beforeRange = true;
+				var afterRange = false;
+				var minDate = _this._rangeStart < _this._rangeEnd ? _this._rangeStart : _this._rangeEnd;
+				var maxDate = _this._rangeEnd > _this._rangeStart ? _this._rangeEnd : _this._rangeStart;
+
+				this.element.find('.month-container').each(function () {
+					var monthId = $(this).data('month-id');
+					if (minDate.getMonth() <= monthId && maxDate.getMonth() >= monthId) {
+						$(this).find('td.day:not(.old, .new)').each(function () {
+							var date = _this._getDate($(this));
+							if (date >= minDate && date <= maxDate) {
+								$(this).addClass('range');
+
+								if (date.getTime() == minDate.getTime()) {
+									$(this).addClass('range-start');
+								}
+
+								if (date.getTime() == maxDate.getTime()) {
+									$(this).addClass('range-end');
+								}
+							}
+						});
+					}
+				});
+			}
+		},
+		_openContextMenu: function _openContextMenu(elt) {
+			var contextMenu = $('.calendar-context-menu');
+
+			if (contextMenu.length > 0) {
+				contextMenu.hide();
+				contextMenu.empty();
+			} else {
+				contextMenu = $(document.createElement('div'));
+				contextMenu.addClass('calendar-context-menu');
+				$('body').append(contextMenu);
+			}
+
+			var date = this._getDate(elt);
+			var events = this.getEvents(date);
+
+			for (var i = 0; i < events.length; i++) {
+				var eventItem = $(document.createElement('div'));
+				eventItem.addClass('item');
+				eventItem.css('border-left', '4px solid ' + events[i].color);
+
+				var eventItemContent = $(document.createElement('div'));
+				eventItemContent.addClass('content');
+				eventItemContent.text(events[i].name);
+
+				eventItem.append(eventItemContent);
+
+				var icon = $(document.createElement('span'));
+				icon.addClass('glyphicon glyphicon-chevron-right');
+
+				eventItem.append(icon);
+
+				this._renderContextMenuItems(eventItem, this.options.contextMenuItems, events[i]);
+
+				contextMenu.append(eventItem);
+			}
+
+			if (contextMenu.children().length > 0) {
+				contextMenu.css('left', elt.offset().left + 25 + 'px');
+				contextMenu.css('top', elt.offset().top + 25 + 'px');
+				contextMenu.show();
+
+				$(window).one('mouseup', function () {
+					contextMenu.hide();
+				});
+			}
+		},
+		_renderContextMenuItems: function _renderContextMenuItems(parent, items, evt) {
+			var subMenu = $(document.createElement('div'));
+			subMenu.addClass('submenu');
+
+			for (var i = 0; i < items.length; i++) {
+				if (!items[i].visible || items[i].visible(evt)) {
+					var menuItem = $(document.createElement('div'));
+					menuItem.addClass('item');
+
+					var menuItemContent = $(document.createElement('div'));
+					menuItemContent.addClass('content');
+					menuItemContent.text(items[i].text);
+
+					menuItem.append(menuItemContent);
+
+					if (items[i].click) {
+						(function (index) {
+							menuItem.click(function () {
+								items[index].click(evt);
+							});
+						})(i);
+					}
+
+					var icon = $(document.createElement('span'));
+					icon.addClass('glyphicon glyphicon-chevron-right');
+
+					menuItem.append(icon);
+
+					if (items[i].items && items[i].items.length > 0) {
+						this._renderContextMenuItems(menuItem, items[i].items, evt);
+					}
+
+					subMenu.append(menuItem);
+				}
+			}
+
+			if (subMenu.children().length > 0) {
+				parent.append(subMenu);
+			}
+		},
+		_getColor: function _getColor(colorString) {
+			var div = $('<div />');
+			div.css('color', colorString);
+		},
+		_getDate: function _getDate(elt) {
+			var day = elt.children('.day-content').text();
+			var month = elt.closest('.month-container').data('month-id');
+			var year = this.options.startYear;
+
+			return new Date(year, month, day);
+		},
+		_triggerEvent: function _triggerEvent(eventName, parameters) {
+			var event = $.Event(eventName);
+
+			for (var i in parameters) {
+				event[i] = parameters[i];
+			}
+
+			this.element.trigger(event);
+
+			return event;
+		},
+		_isDisabled: function _isDisabled(date) {
+			if (this.options.minDate != null && date < this.options.minDate || this.options.maxDate != null && date > this.options.maxDate) {
+				return true;
+			}
+
+			if (this.options.disabledWeekDays.length > 0) {
+				for (var d = 0; d < this.options.disabledWeekDays.length; d++) {
+					if (date.getDay() == this.options.disabledWeekDays[d]) {
+						return true;
+					}
+				}
+			}
+
+			if (this.options.disabledDays.length > 0) {
+				for (var d = 0; d < this.options.disabledDays.length; d++) {
+					if (date.getTime() == this.options.disabledDays[d].getTime()) {
+						return true;
+					}
+				}
+			}
+
+			return false;
+		},
+		_isHidden: function _isHidden(day) {
+			if (this.options.hiddenWeekDays.length > 0) {
+				for (var d = 0; d < this.options.hiddenWeekDays.length; d++) {
+					if (day == this.options.hiddenWeekDays[d]) {
+						return true;
+					}
+				}
+			}
+
+			return false;
+		},
+		getWeekNumber: function getWeekNumber(date) {
+			var tempDate = new Date(date.getTime());
+			tempDate.setHours(0, 0, 0, 0);
+			tempDate.setDate(tempDate.getDate() + 3 - (tempDate.getDay() + 6) % 7);
+			var week1 = new Date(tempDate.getFullYear(), 0, 4);
+			return 1 + Math.round(((tempDate.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+		},
+		getEvents: function getEvents(date) {
+			return this.getEventsOnRange(date, new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1));
+		},
+		getEventsOnRange: function getEventsOnRange(startDate, endDate) {
+			var events = [];
+
+			if (this.options.dataSource && startDate && endDate) {
+				for (var i = 0; i < this.options.dataSource.length; i++) {
+					if (this.options.dataSource[i].startDate < endDate && this.options.dataSource[i].endDate >= startDate) {
+						events.push(this.options.dataSource[i]);
+					}
+				}
+			}
+
+			return events;
+		},
+		getYear: function getYear() {
+			return this.options.startYear;
+		},
+		setYear: function setYear(year) {
+			var parsedYear = parseInt(year);
+			if (!isNaN(parsedYear)) {
+				this.options.startYear = parsedYear;
+
+				this.element.empty();
+
+				if (this.options.displayHeader) {
+					this._renderHeader();
+				}
+
+				var eventResult = this._triggerEvent('yearChanged', { currentYear: this.options.startYear, preventRendering: false });
+
+				if (!eventResult.preventRendering) {
+					this.render();
+				}
+			}
+		},
+		getMinDate: function getMinDate() {
+			return this.options.minDate;
+		},
+		setMinDate: function setMinDate(date, preventRendering) {
+			if (date instanceof Date) {
+				this.options.minDate = date;
+
+				if (!preventRendering) {
+					this.render();
+				}
+			}
+		},
+		getMaxDate: function getMaxDate() {
+			return this.options.maxDate;
+		},
+		setMaxDate: function setMaxDate(date, preventRendering) {
+			if (date instanceof Date) {
+				this.options.maxDate = date;
+
+				if (!preventRendering) {
+					this.render();
+				}
+			}
+		},
+		getStyle: function getStyle() {
+			return this.options.style;
+		},
+		setStyle: function setStyle(style, preventRendering) {
+			this.options.style = style == 'background' || style == 'border' || style == 'custom' ? style : 'border';
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getAllowOverlap: function getAllowOverlap() {
+			return this.options.allowOverlap;
+		},
+		setAllowOverlap: function setAllowOverlap(allowOverlap) {
+			this.options.allowOverlap = allowOverlap;
+		},
+		getDisplayWeekNumber: function getDisplayWeekNumber() {
+			return this.options.displayWeekNumber;
+		},
+		setDisplayWeekNumber: function setDisplayWeekNumber(displayWeekNumber, preventRendering) {
+			this.options.displayWeekNumber = displayWeekNumber;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getDisplayHeader: function getDisplayHeader() {
+			return this.options.displayHeader;
+		},
+		setDisplayHeader: function setDisplayHeader(displayHeader, preventRendering) {
+			this.options.displayHeader = displayHeader;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getDisplayDisabledDataSource: function getDisplayDisabledDataSource() {
+			return this.options.displayDisabledDataSource;
+		},
+		setDisplayDisabledDataSource: function setDisplayDisabledDataSource(displayDisabledDataSource, preventRendering) {
+			this.options.displayDisabledDataSource = displayDisabledDataSource;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getAlwaysHalfDay: function getAlwaysHalfDay() {
+			return this.options.alwaysHalfDay;
+		},
+		setAlwaysHalfDay: function setAlwaysHalfDay(alwaysHalfDay, preventRendering) {
+			this.options.alwaysHalfDay = alwaysHalfDay;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getEnableRangeSelection: function getEnableRangeSelection() {
+			return this.options.enableRangeSelection;
+		},
+		setEnableRangeSelection: function setEnableRangeSelection(enableRangeSelection, preventRendering) {
+			this.options.enableRangeSelection = enableRangeSelection;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getDisabledDays: function getDisabledDays() {
+			return this.options.disabledDays;
+		},
+		setDisabledDays: function setDisabledDays(disabledDays, preventRendering) {
+			this.options.disabledDays = disabledDays instanceof Array ? disabledDays : [];
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getDisabledWeekDays: function getDisabledWeekDays() {
+			return this.options.disabledWeekDays;
+		},
+		setDisabledWeekDays: function setDisabledWeekDays(disabledWeekDays, preventRendering) {
+			this.options.disabledWeekDays = disabledWeekDays instanceof Array ? disabledWeekDays : [];
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getHiddenWeekDays: function getHiddenWeekDays() {
+			return this.options.hiddenWeekDays;
+		},
+		setHiddenWeekDays: function setHiddenWeekDays(hiddenWeekDays, preventRendering) {
+			this.options.hiddenWeekDays = hiddenWeekDays instanceof Array ? hiddenWeekDays : [];
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getRoundRangeLimits: function getRoundRangeLimits() {
+			return this.options.roundRangeLimits;
+		},
+		setRoundRangeLimits: function setRoundRangeLimits(roundRangeLimits, preventRendering) {
+			this.options.roundRangeLimits = roundRangeLimits;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getEnableContextMenu: function getEnableContextMenu() {
+			return this.options.enableContextMenu;
+		},
+		setEnableContextMenu: function setEnableContextMenu(enableContextMenu, preventRendering) {
+			this.options.enableContextMenu = enableContextMenu;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getContextMenuItems: function getContextMenuItems() {
+			return this.options.contextMenuItems;
+		},
+		setContextMenuItems: function setContextMenuItems(contextMenuItems, preventRendering) {
+			this.options.contextMenuItems = contextMenuItems instanceof Array ? contextMenuItems : [];
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getCustomDayRenderer: function getCustomDayRenderer() {
+			return this.options.customDayRenderer;
+		},
+		setCustomDayRenderer: function setCustomDayRenderer(customDayRenderer, preventRendering) {
+			this.options.customDayRenderer = $.isFunction(customDayRenderer) ? customDayRenderer : null;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getCustomDataSourceRenderer: function getCustomDataSourceRenderer() {
+			return this.options.customDataSourceRenderer;
+		},
+		setCustomDataSourceRenderer: function setCustomDataSourceRenderer(customDataSourceRenderer, preventRendering) {
+			this.options.customDataSourceRenderer = $.isFunction(customDataSourceRenderer) ? customDataSourceRenderer : null;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getLanguage: function getLanguage() {
+			return this.options.language;
+		},
+		setLanguage: function setLanguage(language, preventRendering) {
+			if (language != null && dates[language] != null) {
+				this.options.language = language;
+
+				if (!preventRendering) {
+					this.render();
+				}
+			}
+		},
+		getDataSource: function getDataSource() {
+			return this.options.dataSource;
+		},
+		setDataSource: function setDataSource(dataSource, preventRendering) {
+			this.options.dataSource = dataSource instanceof Array ? dataSource : [];
+			this._initializeDatasourceColors();
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		getWeekStart: function getWeekStart() {
+			return this.options.weekStart ? this.options.weekStart : dates[this.options.language].weekStart;
+		},
+		setWeekStart: function setWeekStart(weekStart, preventRendering) {
+			this.options.weekStart = !isNaN(parseInt(weekStart)) ? parseInt(weekStart) : null;
+
+			if (!preventRendering) {
+				this.render();
+			}
+		},
+		addEvent: function addEvent(evt, preventRendering) {
+			this.options.dataSource.push(evt);
+
+			if (!preventRendering) {
+				this.render();
+			}
+		}
+	};
+
+	$.fn.calendar = function (options) {
+		var calendar = new Calendar($(this), options);
+		$(this).data('calendar', calendar);
+		return calendar;
+	};
+
+	/* Events binding management */
+	$.fn.yearChanged = function (fct) {
+		$(this).bind('yearChanged', fct);
+	};
+	$.fn.renderEnd = function (fct) {
+		$(this).bind('renderEnd', fct);
+	};
+	$.fn.clickDay = function (fct) {
+		$(this).bind('clickDay', fct);
+	};
+	$.fn.dayContextMenu = function (fct) {
+		$(this).bind('dayContextMenu', fct);
+	};
+	$.fn.selectRange = function (fct) {
+		$(this).bind('selectRange', fct);
+	};
+	$.fn.mouseOnDay = function (fct) {
+		$(this).bind('mouseOnDay', fct);
+	};
+	$.fn.mouseOutDay = function (fct) {
+		$(this).bind('mouseOutDay', fct);
+	};
+
+	var dates = $.fn.calendar.dates = {
+		en: {
+			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			weekShort: 'W',
+			weekStart: 0
+		}
+	};
+
+	var colors = $.fn.calendar.colors = ['#2C8FC9', '#9CB703', '#F5BB00', '#FF4A32', '#B56CE2', '#45A597'];
+
+	$(function () {
+		$('[data-provide="calendar"]').each(function () {
+			$(this).calendar();
+		});
+	});
+})(window.jQuery);
 
 /***/ })
 /******/ ]);
