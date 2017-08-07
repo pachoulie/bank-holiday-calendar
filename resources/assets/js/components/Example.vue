@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
     .container {
-        width: 600px;
+        width: 610px;
         .legends {
             span {
                 width: 15px;
